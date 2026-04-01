@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fairchild Alchemy</title>
+    <meta
+      name="description"
+      content="Fairchild Alchemy. A dark apothecary storefront for printed forms, handmade objects, art, and curiosities."
+    >
+    <meta name="theme-color" content="#0e0c08">
+    <meta property="og:title" content="Fairchild Alchemy">
+    <meta property="og:description" content="Transmutation of matter and meaning.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne+Mono&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <main class="page-shell">
+      <section class="hero reveal">
+        <div class="hero-copy">
+          <p class="hero-mark">☿</p>
+          <p class="eyebrow">FAIRCHILD ALCHEMY</p>
+          <h1>transmutation of matter and meaning</h1>
+          <p class="hero-text">
+            Printed forms, handmade objects, art, and quiet curiosities for rooms
+            that prefer a lower voice.
+          </p>
+          <div class="hero-meta">
+            <span><strong data-item-count>24</strong> objects</span>
+            <span><strong>4</strong> disciplines</span>
+            <span><strong>paper wrapped</strong> shipping</span>
+          </div>
+          <a class="hero-link" href="#collection">enter the collection</a>
+        </div>
+        <figure class="hero-figure">
+          <img id="hero-image" alt="Featured Fairchild Alchemy object" loading="eager">
+          <figcaption>
+            <span class="figure-label">featured object</span>
+            <strong id="hero-name">Mercury Glass Bottle</strong>
+            <span id="hero-description">Antique-style apothecary bottle for shelf display.</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="intro reveal">
+        <div class="section-heading">
+          <span>── the collection ──</span>
+        </div>
+        <p>
+          Everything here is made, printed, or gathered with the same bias: hold
+          onto what feels deliberate.
+        </p>
+      </section>
+
+      <section id="collection" class="collection" aria-live="polite"></section>
+
+      <section class="about reveal">
+        <div class="section-heading">
+          <span>── about the practice ──</span>
+        </div>
+        <p id="about-copy"></p>
+      </section>
+
+      <section class="contact reveal">
+        <div class="section-heading">
+          <span>── contact ──</span>
+        </div>
+        <a id="contact-link" href="mailto:hello@fairchildalchemy.com">hello@fairchildalchemy.com</a>
+      </section>
+    </main>
+
+    <footer class="footer reveal">☿ fairchild alchemy · est. 2025</footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <template id="category-template">
+      <section class="category reveal">
+        <header class="category-header">
+          <p class="category-kicker"></p>
+          <h2></h2>
+        </header>
+        <div class="product-grid"></div>
+      </section>
+    </template>
+
+    <template id="product-template">
+      <article class="product-card">
+        <button class="product-button" type="button">
+          <div class="image-shell">
+            <img class="product-image" loading="lazy" alt="">
+            <div class="image-fallback" aria-hidden="true"></div>
+          </div>
+          <div class="product-meta">
+            <h3></h3>
+            <p class="product-price"></p>
+            <p class="product-description"></p>
+            <span class="product-cta">arriving soon</span>
+          </div>
+        </button>
+      </article>
+    </template>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

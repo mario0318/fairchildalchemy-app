@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Fairchild Alchemy favicon</title>
+  <desc id="desc">Mercury glyph framed by a gold ring on a dark field.</desc>
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#efd899"/>
+      <stop offset="42%" stop-color="#c9a84c"/>
+      <stop offset="100%" stop-color="#7f6328"/>
+    </linearGradient>
+    <radialGradient id="bg" cx="50%" cy="32%" r="72%">
+      <stop offset="0%" stop-color="#1a140c"/>
+      <stop offset="100%" stop-color="#0b0907"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="256" cy="256" r="184" fill="none" stroke="url(#gold)" stroke-width="14" opacity="0.85"/>
+  <circle cx="256" cy="256" r="156" fill="none" stroke="#352b16" stroke-width="1.5" opacity="0.75"/>
+  <path d="M256 108c-33.1 0-60 26.9-60 60 0 24.8 15 46.2 36.4 55.5v56.5h-46.4v24h46.4V348h-52v24h52v44h24v-44h52v-24h-52v-44h46.4v-24H280.4v-56.5C301.8 214.2 316.8 192.8 316.8 168c0-33.1-26.9-60-60.8-60Zm0 24c20.1 0 36.8 16.4 36.8 36 0 20.2-16.7 36.8-36.8 36.8-20.2 0-36-16.6-36-36.8 0-19.6 15.8-36 36-36Z" fill="url(#gold)"/>
+</svg>
+

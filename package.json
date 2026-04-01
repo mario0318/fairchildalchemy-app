@@ -1,0 +1,24 @@
+{
+  "name": "fairchildalchemy-app",
+  "version": "1.0.0",
+  "description": "Standalone storefront for fairchildalchemy.com",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test",
+    "audit": "node scripts/audit.mjs",
+    "generate:favicon": "node scripts/generate-favicon.mjs"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "helmet": "^8.1.0"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  }
+}
+

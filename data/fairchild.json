@@ -1,0 +1,206 @@
+{
+  "brand": {
+    "name": "Fairchild Alchemy",
+    "tagline": "transmutation of matter and meaning",
+    "contact_email": "hello@fairchildalchemy.com"
+  },
+  "about": "Fairchild Alchemy is a small practice concerned with objects that carry more than their weight. Everything here is either made by hand, printed from geometry, or found and given new context. The name comes from the belief that transformation is the only constant, and that even discarded matter can become something worth holding. Nothing ships in plastic. Everything ships in paper, wrapped as if it matters, because it does.",
+  "categories": [
+    {
+      "id": "3d-printed",
+      "name": "3D Printed Forms",
+      "symbol": "△",
+      "items": [
+        {
+          "name": "Metatron's Vessel",
+          "description": "Dodecahedron planter in matte black PLA for a 3-inch pot and a small rite of watering.",
+          "price": 34,
+          "image_url": "https://images.pexels.com/photos/7222206/pexels-photo-7222206.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Icosahedral Light Cage",
+          "description": "Pendant shade in translucent PETG that turns ordinary lamp glow into a measured halo.",
+          "price": 48,
+          "image_url": "https://images.pexels.com/photos/7223309/pexels-photo-7223309.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Seed of Life Coaster Set",
+          "description": "Six interlocking coasters with a sacred geometry lattice and cork beneath the print lines.",
+          "price": 28,
+          "image_url": "https://images.pexels.com/photos/4158594/pexels-photo-4158594.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Hexagonal Propagation Station",
+          "description": "Wall-mounted lattice with glass tube rests for cuttings that are still deciding what they will become.",
+          "price": 42,
+          "image_url": "https://images.pexels.com/photos/7307541/pexels-photo-7307541.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Torus Desk Object",
+          "description": "Weighted bronze-tone loop for the hand, the shelf, or the small pause between tasks.",
+          "price": 26,
+          "image_url": "https://images.pexels.com/photos/33946874/pexels-photo-33946874.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Voronoi Pen Holder",
+          "description": "Open-cell desktop vessel that keeps pens, brushes, and divining instruments in one place.",
+          "price": 24,
+          "image_url": "https://images.pexels.com/photos/13162093/pexels-photo-13162093.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        }
+      ]
+    },
+    {
+      "id": "handmade",
+      "name": "Handmade Objects",
+      "symbol": "☉",
+      "items": [
+        {
+          "name": "Night Resin Pendant",
+          "description": "Black resin with suspended gold leaf on an adjustable cord, quiet until it catches light.",
+          "price": 22,
+          "image_url": "https://images.pexels.com/photos/36130795/pexels-photo-36130795.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Cedar and Sage Incense Holder",
+          "description": "Hand-carved cedar tray with a scorched finish and a groove for slow smoke.",
+          "price": 18,
+          "image_url": "https://images.pexels.com/photos/5933686/pexels-photo-5933686.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Beeswax Pillar Candle",
+          "description": "Hand-poured pillar with a long burn and a warm honey tone that feels older than it is.",
+          "price": 16,
+          "image_url": "https://images.pexels.com/photos/36471953/pexels-photo-36471953.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Bound Journal — Coptic Stitch",
+          "description": "Leather-bound pages with exposed spine work for notes, sketches, and unfinished formulae.",
+          "price": 38,
+          "image_url": "https://images.pexels.com/photos/35810927/pexels-photo-35810927.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Moon Dish — Wabi Form",
+          "description": "Small ceramic resting dish with a crescent silhouette and salt-crystal texture at the edge.",
+          "price": 19,
+          "image_url": "https://images.pexels.com/photos/6766452/pexels-photo-6766452.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Clay Offering Bowl",
+          "description": "Studio-thrown clay bowl with a soft ash finish for matches, jewelry, or dried herbs.",
+          "price": 21,
+          "image_url": "https://images.pexels.com/photos/5490169/pexels-photo-5490169.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        }
+      ]
+    },
+    {
+      "id": "art",
+      "name": "Art & Print",
+      "symbol": "☽",
+      "items": [
+        {
+          "name": "Solve et Coagula Print",
+          "description": "Cotton-rag print of a hand-lettered transmutation diagram with a soft gold-black register.",
+          "price": 28,
+          "image_url": "https://images.pexels.com/photos/7577854/pexels-photo-7577854.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Botanical Darkness Series — Fern",
+          "description": "A cyanotype study of fern memory and negative space in deep museum blue.",
+          "price": 36,
+          "image_url": "https://images.pexels.com/photos/6404137/pexels-photo-6404137.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Transmutation Circle Poster",
+          "description": "Large-format wall print with metallic geometry and a deliberate amount of empty dark.",
+          "price": 32,
+          "image_url": "https://images.pexels.com/photos/34027363/pexels-photo-34027363.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Mushroom Field Guide Zine",
+          "description": "Staple-bound risograph with hand-drawn caps, spores, and notes from damp ground.",
+          "price": 17,
+          "image_url": "https://images.pexels.com/photos/6966593/pexels-photo-6966593.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Moon Phase Calendar — 2026",
+          "description": "Letterpress calendar that keeps the year in lunar increments instead of corporate quarters.",
+          "price": 24,
+          "image_url": "https://images.pexels.com/photos/13977184/pexels-photo-13977184.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Ink Study: Erosion No. 4",
+          "description": "Original sumi wash on rice paper, more weather pattern than picture.",
+          "price": 85,
+          "image_url": "https://images.pexels.com/photos/13977185/pexels-photo-13977185.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        }
+      ]
+    },
+    {
+      "id": "curiosity",
+      "name": "Curiosities",
+      "symbol": "▽",
+      "items": [
+        {
+          "name": "Mercury Glass Bottle",
+          "description": "Antique-style apothecary bottle for shelf display and nothing more dangerous than that.",
+          "price": 18,
+          "image_url": "https://images.pexels.com/photos/30691889/pexels-photo-30691889.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Wax-Covered Archive Bottle",
+          "description": "Storybook glass vessel with dripped wax neck and the look of a sealed instruction.",
+          "price": 27,
+          "image_url": "https://images.pexels.com/photos/31465404/pexels-photo-31465404.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Lampblack Hourglass",
+          "description": "Five-minute black-sand timer for tea, incense, and the brief ceremonial wait.",
+          "price": 38,
+          "image_url": "https://images.pexels.com/photos/11069123/pexels-photo-11069123.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Dried Rose Bottle Study",
+          "description": "Still-life bottle pair with preserved stems and a cabinet-of-curiosities temperament.",
+          "price": 29,
+          "image_url": "https://images.pexels.com/photos/33960380/pexels-photo-33960380.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Lodestone Specimen",
+          "description": "Green crystal mineral chosen for texture, weight, and the good habit of looking impossible.",
+          "price": 15,
+          "image_url": "https://images.pexels.com/photos/35497313/pexels-photo-35497313.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        },
+        {
+          "name": "Amethyst Cluster",
+          "description": "Display cluster with enough color to hold a corner of the room without speaking loudly.",
+          "price": 65,
+          "image_url": "https://images.pexels.com/photos/33203190/pexels-photo-33203190.jpeg?auto=compress&cs=tinysrgb&w=940",
+          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+        }
+      ]
+    }
+  ]
+}
