@@ -1,204 +1,522 @@
 {
   "brand": {
     "name": "Fairchild Alchemy",
-    "tagline": "transmutation of matter and meaning",
-    "contact_email": "hello@fairchildalchemy.com"
+    "tagline": "Transmutation of matter and meaning.",
+    "contact_email": "hello@fairchildalchemy.com",
+    "about": "We collect, commission, and occasionally make things that resist disposal. Every object earns its shelf."
   },
-  "about": "Fairchild Alchemy is a small practice concerned with objects that carry more than their weight. Everything here is either made by hand, printed from geometry, or found and given new context. The name comes from the belief that transformation is the only constant, and that even discarded matter can become something worth holding. Nothing ships in plastic. Everything ships in paper, wrapped as if it matters, because it does.",
   "categories": [
     {
-      "id": "3d-printed",
-      "name": "3D Printed Forms",
-      "symbol": "△",
+      "id": "sanctum",
+      "name": "The Sanctum",
+      "symbol": "☿",
+      "tagline": "Made by hand. Strictly limited. Never restocked.",
       "items": [
         {
-          "name": "Metatron's Vessel",
-          "description": "Dodecahedron planter in matte black PLA for a 3-inch pot and a small rite of watering.",
-          "price": 34,
-          "image_url": "https://images.pexels.com/photos/7222206/pexels-photo-7222206.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+          "id": "obsidian-smoke-globe",
+          "name": "Obsidian Smoke Globe",
+          "price": 485,
+          "units_total": 3,
+          "units_available": 3,
+          "status": "limited",
+          "short_description": "Hand-blown borosilicate globe with volcanic ash inclusions on an oxidized copper tripod.",
+          "long_description": "Each globe is blown over three sessions at a 1,200°C furnace, volcanic ash and black iron oxide suspended in the gather before the final seal. No two internal smoke patterns are identical — the inclusions drift and reorient as the glass cools, leaving a permanent record of the exact atmospheric conditions in the studio that day. The tripod is fabricated from 3mm copper rod, hand-bent and oxidized with liver of sulfur to a deep verdigris-black. Edition of three.",
+          "materials": [
+            "Borosilicate glass",
+            "Volcanic ash inclusion",
+            "Black iron oxide",
+            "Copper rod",
+            "Liver-of-sulfur patina"
+          ],
+          "dimensions": "15cm globe · 22cm total height on stand",
+          "care": "Dust with microfiber. Avoid prolonged direct sunlight — the internal glass acts as a lens and can concentrate heat.",
+          "image_urls": [
+            "https://picsum.photos/seed/fca-globe-smoke-a/820/920",
+            "https://picsum.photos/seed/fca-globe-smoke-b/820/920",
+            "https://picsum.photos/seed/fca-globe-smoke-night/820/920"
+          ],
+          "generation_seed": {
+            "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
+            "prompt": "studio product photography, hand-blown borosilicate glass sphere 15cm diameter with volcanic ash and black iron oxide smoke inclusions suspended inside glass, sitting on oxidized copper tripod stand with liver-of-sulfur verdigris patina, black studio background, single warm directional spotlight at upper-left creating caustic light refraction through glass, ultra sharp, photorealistic, 85mm macro lens f/2.2, warm amber bokeh, tabletop product shot --ar 4:5 --style raw --q 2",
+            "seed": 847291,
+            "angle_variants": [
+              "same composition 3/4 view rotated 45° clockwise, same lighting",
+              "blue-tinted dim room setting behind globe, simulating nighttime shelf display with single reading lamp at distance",
+              "overhead bird's-eye on white Carrara marble, even diffuse window light"
+            ]
+          },
+          "stripe_payment_link": "https://buy.stripe.com/9B69AU5kH3Vgadne5fdnW00"
         },
         {
-          "name": "Icosahedral Light Cage",
-          "description": "Pendant shade in translucent PETG that turns ordinary lamp glow into a measured halo.",
-          "price": 48,
-          "image_url": "https://images.pexels.com/photos/7223309/pexels-photo-7223309.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+          "id": "damascus-letter-opener",
+          "name": "Damascus-Fold Letter Opener",
+          "price": 265,
+          "units_total": 5,
+          "units_available": 4,
+          "status": "limited",
+          "short_description": "200-layer hand-forged damascus blade with ebonized white oak handle and a hand-turned copper collar.",
+          "long_description": "Folded and drawn out by hand from a billet of 1084 and 15N20 high-carbon steel. Two hundred layers. The pattern emerges from the etch — unpredictable, unrepeatable. The blade is sharpened because a dull thing in a good hand is an insult to the hand. Handle scales of ebonized white oak, fitted with a hand-turned copper collar finished to match the blade's warm highlights. A thing made to be passed down.",
+          "materials": [
+            "1084 high-carbon steel",
+            "15N20 nickel steel",
+            "Ebonized white oak",
+            "Hand-turned copper collar"
+          ],
+          "dimensions": "25cm total · 15cm blade · 10cm handle",
+          "care": "Oil blade lightly with camellia oil monthly. Keep dry. The etch patina deepens with handling — this is correct.",
+          "image_urls": [
+            "https://picsum.photos/seed/fca-damascus-blade-a/820/920",
+            "https://picsum.photos/seed/fca-damascus-blade-b/820/920",
+            "https://picsum.photos/seed/fca-damascus-blade-macro/820/920"
+          ],
+          "generation_seed": {
+            "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
+            "prompt": "editorial product photography, hand-forged damascus steel letter opener with visible 200-layer twist pattern etched blade, ebonized white oak handle with hand-turned copper collar, lying diagonally on aged dark brown leather surface, single overhead rectangular softbox, deep dramatic shadow, ultra sharp macro detail, warm neutral tones, 100mm macro lens f/2.0 --ar 4:5 --style raw --q 2",
+            "seed": 293847,
+            "angle_variants": [
+              "extreme macro closeup of blade surface showing damascus grain pattern, f/2.8 selective focus, raking light",
+              "flat lay top-down on black slate, blade and handle with small gap showing joinery",
+              "held in clean hand against dark backdrop showing scale and natural grip position"
+            ]
+          },
+          "stripe_payment_link": "https://buy.stripe.com/dRm8wQ00n4Zk2KVd1bdnW01"
         },
         {
-          "name": "Seed of Life Coaster Set",
-          "description": "Six interlocking coasters with a sacred geometry lattice and cork beneath the print lines.",
-          "price": 28,
-          "image_url": "https://images.pexels.com/photos/4158594/pexels-photo-4158594.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+          "id": "bronze-celestial-weight",
+          "name": "Lost-Wax Bronze Celestial Weight",
+          "price": 380,
+          "units_total": 2,
+          "units_available": 2,
+          "status": "limited",
+          "short_description": "Cast in solid silicon bronze via lost-wax process. Hand-engraved with the northern celestial hemisphere from a 17th-century atlas.",
+          "long_description": "The star map is taken directly from a 17th-century celestial atlas, redrawn by hand and transferred to a wax form for investment casting. Silicon bronze — chosen for its warm golden tone — was poured at 1,080°C. The casting was hand-chased for twelve hours to restore fine detail. Patinated in three layers: potassium sulfide for depth, ferric nitrate for warmth, and a final carnauba wax seal. Two exist. They will not be made again.",
+          "materials": [
+            "Silicon bronze C65500",
+            "Ferric nitrate patina",
+            "Potassium sulfide depth layer",
+            "Carnauba wax seal"
+          ],
+          "dimensions": "12cm diameter · 1.4kg",
+          "care": "The patina is fully stable. Handling will burnish contact points over time — this is the intended finish evolution.",
+          "image_urls": [
+            "https://picsum.photos/seed/fca-bronze-sphere-a/820/920",
+            "https://picsum.photos/seed/fca-bronze-sphere-b/820/920"
+          ],
+          "generation_seed": {
+            "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
+            "prompt": "product photography, solid cast silicon bronze sphere 12cm diameter with hand-engraved star map of northern celestial hemisphere, warm golden-brown ferric nitrate patina, sitting on dark slate surface, single directional warm light from upper-left, constellation lines visible as engraved grooves, rich shadow, ultra detailed, photorealistic, 85mm lens f/2.8 --ar 4:5 --style raw --q 2",
+            "seed": 112384,
+            "angle_variants": [
+              "macro detail of engraved star map surface, Orion or Ursa Major centered, f/2.8 selective focus",
+              "top-down overhead on black velvet, sphere fully centered, even diffuse light",
+              "nighttime room scene: sphere on wooden shelf beside dimly lit reading lamp, ambient warm glow"
+            ]
+          },
+          "stripe_payment_link": "https://buy.stripe.com/eVqfZi8wTcrM4T30epdnW02"
         },
         {
-          "name": "Hexagonal Propagation Station",
-          "description": "Wall-mounted lattice with glass tube rests for cuttings that are still deciding what they will become.",
-          "price": 42,
-          "image_url": "https://images.pexels.com/photos/7307541/pexels-photo-7307541.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
-        },
-        {
-          "name": "Torus Desk Object",
-          "description": "Weighted bronze-tone loop for the hand, the shelf, or the small pause between tasks.",
-          "price": 26,
-          "image_url": "https://images.pexels.com/photos/33946874/pexels-photo-33946874.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
-        },
-        {
-          "name": "Voronoi Pen Holder",
-          "description": "Open-cell desktop vessel that keeps pens, brushes, and divining instruments in one place.",
-          "price": 24,
-          "image_url": "https://images.pexels.com/photos/13162093/pexels-photo-13162093.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+          "id": "copper-still-vessel",
+          "name": "Hammered Copper Still Vessel",
+          "price": 620,
+          "units_total": 3,
+          "units_available": 2,
+          "status": "limited",
+          "short_description": "Ornamental copper vessel in the form of a small alchemical still. Hand hammer-raised from 18-gauge sheet. Tin-lined interior.",
+          "long_description": "Modeled after the cucurbit-and-alembic configuration used in 16th-century distillation practice — this is not a functional still. It is an argument that the most important laboratory was always the room you live in. Fabricated from 18-gauge copper sheet, hammer-raised over hardwood stakes. The surface carries 4,000 individual hammer strikes, each visible as a facet catching light. The interior is hand-tinned for display of dry botanicals or as a vessel for single malt. Three made.",
+          "materials": [
+            "18-gauge copper sheet C110",
+            "Tin lining",
+            "Silver solder joints"
+          ],
+          "dimensions": "28cm height · 18cm base diameter",
+          "care": "Allow the patina to develop naturally. A living copper surface is part of the object's biography. Interior tin: rinse with cool water only.",
+          "image_urls": [
+            "https://picsum.photos/seed/fca-copper-still-a/820/920",
+            "https://picsum.photos/seed/fca-copper-still-b/820/920",
+            "https://picsum.photos/seed/fca-copper-still-botanicals/820/920"
+          ],
+          "generation_seed": {
+            "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
+            "prompt": "product photography, hand hammer-raised copper alchemical still vessel 28cm tall cucurbit form with visible hammer facets creating light reflections, warm glowing orange-copper tone, tin-lined interior visible at top, sitting on worn dark oak surface, soft window light from left, blurred dark library shelf background, photorealistic, rich warm tones, 85mm f/2.8 --ar 4:5 --style raw --q 2",
+            "seed": 571923,
+            "angle_variants": [
+              "detail shot of copper surface texture showing individual hammer strikes catching raking warm light",
+              "overhead flat-lay showing vessel opening with dry botanicals — lavender, star anise, bay — placed inside",
+              "evening mantelpiece: vessel beside open hardcover book and single lit pillar candle, candlelight only"
+            ]
+          },
+          "stripe_payment_link": "https://buy.stripe.com/6oU9AU8wTcrMbhr5yJdnW03"
         }
       ]
     },
     {
-      "id": "handmade",
-      "name": "Handmade Objects",
-      "symbol": "☉",
+      "id": "study",
+      "name": "The Study",
+      "symbol": "⊞",
+      "tagline": "Objects for the surface you think on.",
       "items": [
         {
-          "name": "Night Resin Pendant",
-          "description": "Black resin with suspended gold leaf on an adjustable cord, quiet until it catches light.",
-          "price": 22,
-          "image_url": "https://images.pexels.com/photos/36130795/pexels-photo-36130795.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+          "id": "mova-globe-earth",
+          "name": "MOVA Globe — Antique Earth Edition",
+          "price": 149,
+          "units_total": null,
+          "units_available": null,
+          "status": "available",
+          "short_description": "Self-rotating globe driven by ambient light and Earth's magnetic field. No batteries. No maintenance. Ever.",
+          "long_description": "The MOVA Globe rotates continuously using only ambient light — photovoltaic cells hidden behind the map surface convert indoor light levels into enough current to spin the globe against the Earth's magnetic field. The Antique Earth edition uses a sepia-toned cartographic print derived from 19th-century Rand McNally plates, with hand-applied relief shading. The outer acrylic sphere is filled with a refractive fluid that optically enlarges the rotating globe within and protects it from dust. One rotation every 72 seconds. It will outlast the room.",
+          "materials": [
+            "Acrylic outer sphere",
+            "Refractive fluid",
+            "Photovoltaic cell array",
+            "Rare earth magnets",
+            "Cartographic print globe"
+          ],
+          "dimensions": "15cm diameter",
+          "care": "No maintenance required. Ensure moderate ambient light. The refractive fluid is factory-sealed for life.",
+          "image_urls": [
+            "https://picsum.photos/seed/fca-mova-earth-a/820/920",
+            "https://picsum.photos/seed/fca-mova-earth-b/820/920"
+          ],
+          "generation_seed": {
+            "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
+            "prompt": "product photography, MOVA self-rotating globe 15cm antique sepia earth edition on dark office desk, acrylic outer sphere catching reflections, antique cartographic map visible through sphere, single warm directional desk lamp from upper-right, dark moody office background, rich bokeh, photorealistic, 85mm f/1.8 --ar 4:5 --style raw --q 2",
+            "seed": 648203,
+            "angle_variants": [
+              "same globe on white marble with even daylight from window, clean minimalist aesthetic, full white backdrop",
+              "macro detail of cartographic surface through acrylic sphere showing 19th-century relief print texture and sepia tones"
+            ]
+          },
+          "stripe_payment_link": "https://buy.stripe.com/fZudRadRd2Rc71b2mxdnW04"
         },
         {
-          "name": "Cedar and Sage Incense Holder",
-          "description": "Hand-carved cedar tray with a scorched finish and a groove for slow smoke.",
-          "price": 18,
-          "image_url": "https://images.pexels.com/photos/5933686/pexels-photo-5933686.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+          "id": "meridian-calendar",
+          "name": "Meridian Perpetual Calendar",
+          "price": 125,
+          "units_total": null,
+          "units_available": null,
+          "status": "available",
+          "short_description": "Three independently rotating knurled brass dials for day, date, and month. Engraved numerals — not printed.",
+          "long_description": "Three knurled brass dials, each independently set by hand. The day dial has 7 positions, the date dial 31, the month dial 12. The numerals and text are engraved, not printed — they will still be legible in a hundred years. The base is solid brass, sand-cast and hand-finished to an aged patina using liver-of-sulfur treatment. The whole assembly weighs 340 grams. There is no digital equivalent of the small decision to turn the date dial forward each morning.",
+          "materials": [
+            "Sand-cast brass C260",
+            "Liver-of-sulfur patina",
+            "Knurled dial stock"
+          ],
+          "dimensions": "14cm width · 8cm height · 5cm depth · 340g",
+          "care": "Tarnish can be reversed with a light application of brass polish. The patina is a choice, not a flaw.",
+          "image_urls": [
+            "https://picsum.photos/seed/fca-brass-calendar-a/820/920",
+            "https://picsum.photos/seed/fca-brass-calendar-b/820/920"
+          ],
+          "generation_seed": {
+            "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
+            "prompt": "product photography, mechanical perpetual desk calendar in aged brass with three independently rotating knurled dials showing day date month, warm antique brass patina, sitting on dark walnut desk, single directional overhead warm light, visible engraved numerals, dark moody background, 85mm lens f/2.8 --ar 4:5 --style raw --q 2",
+            "seed": 399214,
+            "angle_variants": [
+              "extreme closeup of single brass dial showing knurled texture and engraved numerals, f/2.0 selective focus",
+              "three-quarter view showing all three dials from slightly above, dark moody background, warm raking light"
+            ]
+          },
+          "stripe_payment_link": "https://buy.stripe.com/bJe9AU6oLcrM3OZaT3dnW05"
         },
         {
-          "name": "Beeswax Pillar Candle",
-          "description": "Hand-poured pillar with a long burn and a warm honey tone that feels older than it is.",
-          "price": 16,
-          "image_url": "https://images.pexels.com/photos/36471953/pexels-photo-36471953.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+          "id": "vachetta-desk-pad",
+          "name": "Vachetta Leather Desk Pad",
+          "price": 145,
+          "units_total": null,
+          "units_available": null,
+          "status": "available",
+          "short_description": "Full-surface pad in unfinished vachetta leather. Hand saddle-stitched. Darkens beautifully with use.",
+          "long_description": "Vachetta is the same leather used on the handles of classic French luggage — vegetable-tanned, unfinished, undyed. It sells pale and chalky and becomes, through use and light, a deep caramel unique to the person using it. The coffee ring, the pen mark, the oil of a hand rested — these are the patina. Sized for a full monitor and keyboard setup. The underside has a natural suede finish that grips without adhesive. Edges are folded and saddle-stitched by hand with waxed linen thread.",
+          "materials": [
+            "Full-grain vachetta leather",
+            "Waxed linen saddle-stitch thread"
+          ],
+          "dimensions": "86cm × 38cm · 3mm thickness",
+          "care": "Apply a light coat of neatsfoot oil every 6–12 months. It will age — that aging is the object becoming yours.",
+          "image_urls": [
+            "https://picsum.photos/seed/fca-vachetta-pad-a/820/920",
+            "https://picsum.photos/seed/fca-vachetta-pad-aged/820/920"
+          ],
+          "generation_seed": {
+            "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
+            "prompt": "product photography, full-grain vachetta leather desk pad 86cm wide, pale natural tan color with hand saddle-stitched edges using waxed linen thread, on dark walnut desk with blurred keyboard and coffee cup, soft diffuse window light from left, visible leather grain, photorealistic, flat lay slightly angled, 35mm lens f/4 --ar 4:5 --style raw --q 2",
+            "seed": 736182,
+            "angle_variants": [
+              "close-up macro of stitched edge showing waxed linen thread and leather grain detail, f/2.8 raking light",
+              "same pad after 18 months use with rich caramel honey patina, light coffee ring and pen marks visible"
+            ]
+          },
+          "stripe_payment_link": "https://buy.stripe.com/eVq5kE4gDajE85faT3dnW06"
         },
         {
-          "name": "Bound Journal — Coptic Stitch",
-          "description": "Leather-bound pages with exposed spine work for notes, sketches, and unfinished formulae.",
-          "price": 38,
-          "image_url": "https://images.pexels.com/photos/35810927/pexels-photo-35810927.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
-        },
-        {
-          "name": "Moon Dish — Wabi Form",
-          "description": "Small ceramic resting dish with a crescent silhouette and salt-crystal texture at the edge.",
-          "price": 19,
-          "image_url": "https://images.pexels.com/photos/6766452/pexels-photo-6766452.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
-        },
-        {
-          "name": "Clay Offering Bowl",
-          "description": "Studio-thrown clay bowl with a soft ash finish for matches, jewelry, or dried herbs.",
-          "price": 21,
-          "image_url": "https://images.pexels.com/photos/5490169/pexels-photo-5490169.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+          "id": "aerospace-fidget-spinner",
+          "name": "Aerospace Brass Fidget Spinner",
+          "price": 68,
+          "units_total": null,
+          "units_available": null,
+          "status": "available",
+          "short_description": "Precision-machined from solid C360 brass. ABEC-9 ceramic hybrid bearing. 4-minute rated spin time. 148g.",
+          "long_description": "This began as a 6-inch round of C360 free-machining brass. Turned on a CNC lathe to ±0.005mm tolerance, then hand-polished through 800, 1200, and 2000 grit before a final rouge finish. The three lobes are balanced to within 0.1 grams of each other — any looser and you feel it in the spin. The center bearing is an ABEC-9 ceramic hybrid: steel races, silicon nitride balls, no lubrication needed. Four-minute rated spin time under a single moderate flick. Weight is the point: 148 grams in your palm is not a toy.",
+          "materials": [
+            "C360 free-machining brass",
+            "ABEC-9 ceramic hybrid bearing",
+            "Silicon nitride bearing balls"
+          ],
+          "dimensions": "7.6cm wingspan · 148g",
+          "care": "Polish with microfiber to maintain mirror finish. Bearing is sealed and maintenance-free.",
+          "image_urls": [
+            "https://picsum.photos/seed/fca-brass-spinner-a/820/920",
+            "https://picsum.photos/seed/fca-brass-spinner-spin/820/920"
+          ],
+          "generation_seed": {
+            "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
+            "prompt": "product photography, precision-machined solid brass fidget spinner with three symmetrical lobes, mirror-polished finish showing reflections, lying flat on dark slate surface, single overhead directional light creating specular highlights across brass, dark moody minimal background, ultra detailed, photorealistic, 100mm macro lens f/2.8 --ar 4:5 --style raw --q 2",
+            "seed": 529017,
+            "angle_variants": [
+              "spinner balanced on fingertip mid-spin with motion blur on lobes, sharp center bearing, neutral bokeh",
+              "exploded flat-lay showing spinner body, ceramic bearing cap, and bearing separated by 3cm on dark surface"
+            ]
+          },
+          "stripe_payment_link": "https://buy.stripe.com/3cI5kE00n8bwadn0epdnW07"
         }
       ]
     },
     {
-      "id": "art",
-      "name": "Art & Print",
+      "id": "ritual",
+      "name": "Ritual Objects",
+      "symbol": "⌘",
+      "tagline": "Things that reward daily use.",
+      "items": [
+        {
+          "id": "tsuru-incense-holder",
+          "name": "Tsuru Cast-Iron Incense Set",
+          "price": 92,
+          "units_total": null,
+          "units_available": null,
+          "status": "available",
+          "short_description": "Set of three Nambu-style cast-iron crane figures at staggered heights. Holds stick or cone incense.",
+          "long_description": "The tsuru (鶴) is a crane, and in Japan it carries the weight of a thousand-year wish. These three figures are cast in traditional Nambu-style iron from a sand mold and hand-finished with a natural lacquer seal that resists rust. Each crane stands at a slightly different height; together they form a composition. A small notch at the beak holds stick incense; the base collar catches ash from cone incense. The iron darkens further with use and heat, becoming blacker and more itself.",
+          "materials": [
+            "Cast iron",
+            "Natural lacquer rust seal"
+          ],
+          "dimensions": "Set of 3 · 6cm / 8cm / 10cm heights",
+          "care": "Avoid prolonged water contact. Wipe dry after use. Do not use soap — it strips the seasoning.",
+          "image_urls": [
+            "https://picsum.photos/seed/fca-tsuru-cranes-a/820/920",
+            "https://picsum.photos/seed/fca-tsuru-cranes-smoke/820/920"
+          ],
+          "generation_seed": {
+            "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
+            "prompt": "product photography, set of three Nambu-style cast iron tsuru crane figurines at heights 6cm 8cm 10cm, very dark matte black iron surface with lacquer sheen, arranged in composition on dark stone surface, one with incense stick showing thin wisp of white smoke, soft moody ambient light, bokeh background suggests Japanese interior, ultra detailed, photorealistic, 85mm f/2.0 --ar 4:5 --style raw --q 2",
+            "seed": 184739,
+            "angle_variants": [
+              "single crane extreme macro showing sand-cast iron surface texture and lacquer sheen, f/2.8",
+              "all three cranes lit from below by small candle, dramatic low uplight, dark room, smoke wisps"
+            ]
+          },
+          "stripe_payment_link": "https://buy.stripe.com/6oU8wQ4gD8bw4T33qBdnW08"
+        },
+        {
+          "id": "wabi-ceramic-pour-set",
+          "name": "Wabi-Sabi Ceramic Pour Set",
+          "price": 165,
+          "units_total": 5,
+          "units_available": 5,
+          "status": "limited",
+          "short_description": "Hand-thrown stoneware pour-over dripper and cup in wood-ash glaze with natural crawl. Cone 10 reduction-fired. No two alike.",
+          "long_description": "Thrown on a kick wheel from iron-rich stoneware clay, bisque-fired, then glazed with a wood-ash glaze that crawls and pools during the cone 10 reduction firing. The crawl patterns form where the glaze pulls back from the clay body — dry rough edges against a glossy pool, each unique. The dripper fits a standard Chemex carafe. The cup holds 280ml and the glaze interior is fully food-safe. This is not minimalist design imposed on a mug. It is a mug that arrived at its own form. Edition of five.",
+          "materials": [
+            "Iron-rich stoneware clay",
+            "Wood-ash glaze",
+            "Cone 10 reduction-fired"
+          ],
+          "dimensions": "Dripper: 13cm height · Cup: 280ml · 9cm height",
+          "care": "Dishwasher safe but hand-wash recommended to preserve glaze character. Patina deepens with repeated coffee contact.",
+          "image_urls": [
+            "https://picsum.photos/seed/fca-wabi-pour-a/820/920",
+            "https://picsum.photos/seed/fca-wabi-pour-b/820/920",
+            "https://picsum.photos/seed/fca-wabi-pour-brew/820/920"
+          ],
+          "generation_seed": {
+            "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
+            "prompt": "product photography, hand-thrown stoneware wabi-sabi ceramic pour-over dripper and cup set, wood-ash glaze with natural crawl patterns showing matte dry edges against glossy pools, iron-rich dark clay body visible at rim, sitting on light concrete surface, soft diffuse morning window light from left, steam wisps from cup, ultra detailed, photorealistic, 85mm f/2.8 --ar 4:5 --style raw --q 2",
+            "seed": 293018,
+            "angle_variants": [
+              "overhead flat-lay on dark linen cloth showing full top-down glaze crawl pattern of both pieces",
+              "close-up macro of glaze crawl edge showing transition from matte dry to glossy pool surface",
+              "lifestyle: hands holding cup of black coffee, morning window light, blurred plants in background"
+            ]
+          },
+          "stripe_payment_link": "https://buy.stripe.com/9B65kE28v8bw71b7GRdnW09"
+        },
+        {
+          "id": "fig-cypress-candle",
+          "name": "Black Fig & Cypress Vessel Candle",
+          "price": 46,
+          "units_total": null,
+          "units_available": null,
+          "status": "available",
+          "short_description": "Hand-poured beeswax blend in a hand-thrown ceramic vessel. Black fig, cypress bark, and vetiver. 40-hour burn.",
+          "long_description": "The wax is a blend of refined beeswax and coconut wax for clean burn and optimal throw. The fragrance is built around black fig — dense, slightly fermented, almost wine-like — cut with cypress bark for resin and vetiver for earth. It is not a spa candle. It is a room candle: the kind that changes the quality of air without announcing itself. The ceramic vessel is hand-thrown and should be repurposed after the candle burns down. Each burns approximately 40 hours.",
+          "materials": [
+            "Refined beeswax",
+            "Coconut wax",
+            "Fragrance: black fig, cypress bark, vetiver",
+            "Cotton wick",
+            "Hand-thrown stoneware vessel"
+          ],
+          "dimensions": "9cm height · 7cm diameter · 240g · ~40hr burn time",
+          "care": "Trim wick to 6mm before each burn. First burn: allow the full melt pool to form before extinguishing.",
+          "image_urls": [
+            "https://picsum.photos/seed/fca-fig-candle-a/820/920",
+            "https://picsum.photos/seed/fca-fig-candle-lit/820/920"
+          ],
+          "generation_seed": {
+            "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
+            "prompt": "product photography, hand-poured beeswax candle in hand-thrown dark stoneware vessel 9cm height, cotton wick, warm candlelight flickering, dark moody room background, candle as only light source creating warm amber glow across stone surface texture, slight smoke trail at wick, ultra detailed, photorealistic, 85mm f/2.0 --ar 4:5 --style raw --q 2",
+            "seed": 449027,
+            "angle_variants": [
+              "unlit candle on white marble in even daylight, showing vessel form and wax surface texture with wick",
+              "nighttime: single lit candle on dark wood table casting warm amber pool, nothing else visible"
+            ]
+          },
+          "stripe_payment_link": "https://buy.stripe.com/7sY3cw9AXezU85faT3dnW0a"
+        },
+        {
+          "id": "highland-whisky-stones",
+          "name": "Highland Whisky Stones + Leather Pouch",
+          "price": 58,
+          "units_total": null,
+          "units_available": null,
+          "status": "available",
+          "short_description": "Eight tumbled Connemara marble stones from the west of Ireland, with hand-stitched full-grain leather drawstring pouch.",
+          "long_description": "These are not soapstone. Soapstone scratches, breaks, and doesn't hold temperature. These are tumbled Connemara marble from the west of Ireland — the green-veined stone that was beneath the bogs before the bogs existed. Marble conducts cold better than soapstone and looks markedly better in a glass. Each stone tumbled smooth with no sharp edges. Eight stones fit two glasses. The pouch is hand-stitched full-grain leather with a waxed linen drawstring. It will outlive the stones by decades.",
+          "materials": [
+            "Connemara marble (Ireland)",
+            "Full-grain leather pouch",
+            "Waxed linen drawstring"
+          ],
+          "dimensions": "8 stones · avg 3cm each · Pouch: 12cm × 9cm",
+          "care": "Rinse stones and air-dry before returning to pouch. Do not freeze inside the leather pouch.",
+          "image_urls": [
+            "https://picsum.photos/seed/fca-marble-stones-a/820/920",
+            "https://picsum.photos/seed/fca-marble-stones-glass/820/920"
+          ],
+          "generation_seed": {
+            "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
+            "prompt": "product photography, eight tumbled Connemara marble whisky stones with distinctive green veining, arranged beside hand-stitched full-grain leather drawstring pouch on dark walnut surface, moody bar lighting from left, warm amber highlights on marble and leather, crystal old-fashioned glass with amber whisky and stones in background, photorealistic, 85mm f/2.0 --ar 4:5 --style raw --q 2",
+            "seed": 381047,
+            "angle_variants": [
+              "overhead flat-lay: eight stones in geometric arrangement on dark linen, leather pouch open beside",
+              "lifestyle: two crystal old-fashioned glasses with stones and amber whisky, dark bar setting, warm glow"
+            ]
+          },
+          "stripe_payment_link": "https://buy.stripe.com/dRm6oI9AXbnI85f6CNdnW0b"
+        }
+      ]
+    },
+    {
+      "id": "library",
+      "name": "The Library",
       "symbol": "☽",
+      "tagline": "For the mind that still prefers a physical object.",
       "items": [
         {
-          "name": "Solve et Coagula Print",
-          "description": "Cotton-rag print of a hand-lettered transmutation diagram with a soft gold-black register.",
-          "price": 28,
-          "image_url": "https://images.pexels.com/photos/7577854/pexels-photo-7577854.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+          "id": "coptic-journal",
+          "name": "Coptic-Stitch Hand-Bound Journal",
+          "price": 78,
+          "units_total": 5,
+          "units_available": 5,
+          "status": "limited",
+          "short_description": "Hand-sewn in the Coptic tradition. Lies completely flat when open. 320 pages of 120gsm Tomoe River paper.",
+          "long_description": "The Coptic stitch — used by Egyptian bookbinders since the 4th century — produces a book that opens completely flat, every page, without cracking the spine, because there is no spine. The spine is open, the signatures visible, the thread pattern itself part of the aesthetic. Covers are 3mm bookbinder's board wrapped in natural undyed kozo paper. Pages are 120gsm Tomoe River, the preferred paper for fountain pen users for its near-zero bleed on even the wettest nibs. 320 pages, numbered in a small corner serif. Five exist.",
+          "materials": [
+            "3mm bookbinder's board",
+            "Natural undyed kozo paper cover",
+            "120gsm Tomoe River pages",
+            "Waxed linen thread"
+          ],
+          "dimensions": "A5 · 21cm × 14.8cm · 320 pages · 20mm spine",
+          "care": "Keep dry. The kozo cover can be spot-cleaned with a barely damp cloth and air-dried flat.",
+          "image_urls": [
+            "https://picsum.photos/seed/fca-coptic-journal-a/820/920",
+            "https://picsum.photos/seed/fca-coptic-journal-open/820/920",
+            "https://picsum.photos/seed/fca-coptic-journal-spine/820/920"
+          ],
+          "generation_seed": {
+            "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
+            "prompt": "product photography, hand-bound Coptic-stitch journal A5, natural undyed kozo paper cover with visible texture, open flat showing open spine and visible waxed linen thread stitching pattern, 120gsm cream Tomoe River pages, lying on dark weathered wood, soft even light from above-left, ultra detailed bookbinding craft, photorealistic, 85mm f/2.8 --ar 4:5 --style raw --q 2",
+            "seed": 612837,
+            "angle_variants": [
+              "closed journal standing upright showing spine with exposed Coptic stitch detail, dark background",
+              "journal open flat at center spread with fountain pen resting across pages, morning window light",
+              "extreme macro of Coptic stitch showing linen thread pattern and bookboard edge detail, f/2.8"
+            ]
+          },
+          "stripe_payment_link": "https://buy.stripe.com/4gM4gA7sP77s85ff9jdnW0c"
         },
         {
-          "name": "Botanical Darkness Series — Fern",
-          "description": "A cyanotype study of fern memory and negative space in deep museum blue.",
-          "price": 36,
-          "image_url": "https://images.pexels.com/photos/6404137/pexels-photo-6404137.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+          "id": "gravity-paradox-sphere",
+          "name": "Gravity Paradox Sphere",
+          "price": 52,
+          "units_total": null,
+          "units_available": null,
+          "status": "available",
+          "short_description": "Hand-turned black walnut sphere that disassembles into 12 interlocking pieces. No glue, no screws, no magnets. Gravity holds it.",
+          "long_description": "Twelve pieces of American black walnut, turned on a lathe and fitted to within 0.1mm tolerance. The assembly is self-locking under gravity — it holds itself without glue, screws, or magnets. Disassembly requires a specific sequence of moves in a specific order. Then it falls apart in your hands. Reassembly is about finding the logic embedded in the wood. The surface is finished with a single coat of Danish oil, which enhances the walnut grain without filling it. No two are identical — the grain makes them different objects.",
+          "materials": [
+            "Hand-turned American black walnut",
+            "Danish oil finish"
+          ],
+          "dimensions": "9cm diameter assembled · 12 interlocking pieces",
+          "care": "Keep dry. Danish oil can be refreshed annually with a light wipe. Do not force pieces.",
+          "image_urls": [
+            "https://picsum.photos/seed/fca-gravity-sphere-a/820/920",
+            "https://picsum.photos/seed/fca-gravity-sphere-open/820/920"
+          ],
+          "generation_seed": {
+            "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
+            "prompt": "product photography, hand-turned black walnut wooden puzzle sphere 9cm diameter assembled with some pieces slightly separated showing interlocking joinery, Danish oil finish enhancing walnut grain, sitting on dark slate surface with scattered walnut shavings, single directional warm light from upper right, ultra detailed wood grain, photorealistic, 100mm macro lens f/2.8 --ar 4:5 --style raw --q 2",
+            "seed": 738291,
+            "angle_variants": [
+              "overhead view of sphere fully disassembled: 12 walnut pieces in geometric formation on dark surface",
+              "hands assembling sphere, fingertips placing final piece, warm moody light, selective focus"
+            ]
+          },
+          "stripe_payment_link": "https://buy.stripe.com/5kQcN67sPezU71b2mxdnW0d"
         },
         {
-          "name": "Transmutation Circle Poster",
-          "description": "Large-format wall print with metallic geometry and a deliberate amount of empty dark.",
-          "price": 32,
-          "image_url": "https://images.pexels.com/photos/34027363/pexels-photo-34027363.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
-        },
-        {
-          "name": "Mushroom Field Guide Zine",
-          "description": "Staple-bound risograph with hand-drawn caps, spores, and notes from damp ground.",
-          "price": 17,
-          "image_url": "https://images.pexels.com/photos/6966593/pexels-photo-6966593.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
-        },
-        {
-          "name": "Moon Phase Calendar — 2026",
-          "description": "Letterpress calendar that keeps the year in lunar increments instead of corporate quarters.",
-          "price": 24,
-          "image_url": "https://images.pexels.com/photos/13977184/pexels-photo-13977184.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
-        },
-        {
-          "name": "Ink Study: Erosion No. 4",
-          "description": "Original sumi wash on rice paper, more weather pattern than picture.",
-          "price": 85,
-          "image_url": "https://images.pexels.com/photos/13977185/pexels-photo-13977185.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
-        }
-      ]
-    },
-    {
-      "id": "curiosity",
-      "name": "Curiosities",
-      "symbol": "▽",
-      "items": [
-        {
-          "name": "Mercury Glass Bottle",
-          "description": "Antique-style apothecary bottle for shelf display and nothing more dangerous than that.",
-          "price": 18,
-          "image_url": "https://images.pexels.com/photos/30691889/pexels-photo-30691889.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
-        },
-        {
-          "name": "Wax-Covered Archive Bottle",
-          "description": "Storybook glass vessel with dripped wax neck and the look of a sealed instruction.",
-          "price": 27,
-          "image_url": "https://images.pexels.com/photos/31465404/pexels-photo-31465404.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
-        },
-        {
-          "name": "Lampblack Hourglass",
-          "description": "Five-minute black-sand timer for tea, incense, and the brief ceremonial wait.",
-          "price": 38,
-          "image_url": "https://images.pexels.com/photos/11069123/pexels-photo-11069123.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
-        },
-        {
-          "name": "Dried Rose Bottle Study",
-          "description": "Still-life bottle pair with preserved stems and a cabinet-of-curiosities temperament.",
-          "price": 29,
-          "image_url": "https://images.pexels.com/photos/33960380/pexels-photo-33960380.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
-        },
-        {
-          "name": "Lodestone Specimen",
-          "description": "Green crystal mineral chosen for texture, weight, and the good habit of looking impossible.",
-          "price": 15,
-          "image_url": "https://images.pexels.com/photos/35497313/pexels-photo-35497313.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
-        },
-        {
-          "name": "Amethyst Cluster",
-          "description": "Display cluster with enough color to hold a corner of the room without speaking loudly.",
-          "price": 65,
-          "image_url": "https://images.pexels.com/photos/33203190/pexels-photo-33203190.jpeg?auto=compress&cs=tinysrgb&w=940",
-          "stripe_price_id": "REPLACE_WITH_STRIPE_PRICE_ID"
+          "id": "maritime-compass-weight",
+          "name": "Maritime Brass Compass Weight",
+          "price": 88,
+          "units_total": null,
+          "units_available": null,
+          "status": "available",
+          "short_description": "Functional sand-cast brass compass on a weighted base. 32-point hand-engraved rose. 19th-century surveying instrument aesthetic.",
+          "long_description": "A working compass in solid brass — not the kind where the needle sticks. The mechanism is a liquid-filled gimbal-mounted needle that settles to magnetic north with a satisfying stillness. The rose is hand-engraved with 32 cardinal and intercardinal points in the traditional manner, with the fleur-de-lis marking north as it has for six centuries. The base is sand-cast brass, aged to match the instrument. It weighs enough to stay where you put it. This is a navigational instrument that has nowhere left to navigate. Its new job is to remind you that north still exists.",
+          "materials": [
+            "Solid brass C26000",
+            "Liquid-filled compass mechanism",
+            "Sand-cast brass base"
+          ],
+          "dimensions": "10cm compass diameter · 14cm base diameter · 580g",
+          "care": "Keep away from strong magnets and speaker systems. Brass polish annually if desired.",
+          "image_urls": [
+            "https://picsum.photos/seed/fca-compass-brass-a/820/920",
+            "https://picsum.photos/seed/fca-compass-brass-detail/820/920"
+          ],
+          "generation_seed": {
+            "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
+            "prompt": "product photography, antique-style solid brass compass paperweight on sand-cast brass base 14cm, 19th-century surveying instrument aesthetic, hand-engraved 32-point compass rose with fleur-de-lis north marking, aged warm brass patina, sitting on dark leather desk blotter, single warm directional light from upper-left, compass needle pointing north clearly visible, ultra detailed, photorealistic, 85mm f/2.0 --ar 4:5 --style raw --q 2",
+            "seed": 904127,
+            "angle_variants": [
+              "extreme macro overhead of compass rose face showing engraved points and needle in detail, f/4",
+              "three-quarter view showing compass and base on open nautical chart map background, warm moody light"
+            ]
+          },
+          "stripe_payment_link": "https://buy.stripe.com/7sY14o8wTfDYdpze5fdnW0e"
         }
       ]
     }

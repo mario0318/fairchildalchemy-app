@@ -4,78 +4,62 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fairchild Alchemy</title>
-    <meta
-      name="description"
-      content="Fairchild Alchemy. A dark apothecary storefront for printed forms, handmade objects, art, and curiosities."
-    >
+    <meta name="description" content="Fairchild Alchemy. Transmutation of matter and meaning. Premium handmade objects, artisan curiosities, and things that resist disposal.">
     <meta name="theme-color" content="#0e0c08">
     <meta property="og:title" content="Fairchild Alchemy">
     <meta property="og:description" content="Transmutation of matter and meaning.">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne+Mono&display=swap"
-      rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne+Mono&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
+
     <main class="page-shell">
       <section class="hero reveal">
         <div class="hero-copy">
           <p class="hero-mark">☿</p>
           <p class="eyebrow">FAIRCHILD ALCHEMY</p>
           <h1>transmutation of matter and meaning</h1>
-          <p class="hero-text">
-            Printed forms, handmade objects, art, and quiet curiosities for rooms
-            that prefer a lower voice.
-          </p>
+          <p class="hero-text">Premium handmade objects, artisan curiosities, and things that resist disposal. Every object earns its shelf.</p>
           <div class="hero-meta">
-            <span><strong data-item-count>24</strong> objects</span>
+            <span><strong data-item-count>15</strong> objects</span>
             <span><strong>4</strong> disciplines</span>
             <span><strong>paper wrapped</strong> shipping</span>
           </div>
           <a class="hero-link" href="#collection">enter the collection</a>
         </div>
         <figure class="hero-figure">
-          <img id="hero-image" alt="Featured Fairchild Alchemy object" loading="eager">
+          <div class="hero-image-shell">
+            <img id="hero-image" alt="Featured Fairchild Alchemy object" loading="eager">
+            <div class="hero-image-fallback" aria-hidden="true">☿</div>
+          </div>
           <figcaption>
             <span class="figure-label">featured object</span>
-            <strong id="hero-name">Mercury Glass Bottle</strong>
-            <span id="hero-description">Antique-style apothecary bottle for shelf display.</span>
+            <strong id="hero-name">Obsidian Smoke Globe</strong>
+            <span id="hero-description">Hand-blown borosilicate globe with volcanic ash inclusions.</span>
           </figcaption>
         </figure>
       </section>
 
       <section class="intro reveal">
-        <div class="section-heading">
-          <span>── the collection ──</span>
-        </div>
-        <p>
-          Everything here is made, printed, or gathered with the same bias: hold
-          onto what feels deliberate.
-        </p>
+        <div class="section-heading"><span>── the collection ──</span></div>
+        <p>Everything here is made, printed, or gathered with the same bias: hold onto what feels deliberate.</p>
       </section>
 
       <section id="collection" class="collection" aria-live="polite"></section>
 
       <section class="about reveal">
-        <div class="section-heading">
-          <span>── about the practice ──</span>
-        </div>
+        <div class="section-heading"><span>── about the practice ──</span></div>
         <p id="about-copy"></p>
       </section>
 
       <section class="contact reveal">
-        <div class="section-heading">
-          <span>── contact ──</span>
-        </div>
+        <div class="section-heading"><span>── contact ──</span></div>
         <a id="contact-link" href="mailto:hello@fairchildalchemy.com">hello@fairchildalchemy.com</a>
       </section>
     </main>
@@ -83,11 +67,111 @@
     <footer class="footer reveal">☿ fairchild alchemy · est. 2025</footer>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
+    <!-- ─── MODAL ─── -->
+    <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+      <div class="modal" id="modal">
+        <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+
+        <div class="modal-carousel" id="modal-carousel">
+          <img class="modal-img" id="modal-img" alt="" loading="lazy">
+          <div class="modal-img-fallback" id="modal-img-fallback" aria-hidden="true"></div>
+          <button class="carousel-btn carousel-prev" id="carousel-prev" aria-label="Previous image">‹</button>
+          <button class="carousel-btn carousel-next" id="carousel-next" aria-label="Next image">›</button>
+          <div class="carousel-dots" id="carousel-dots"></div>
+        </div>
+
+        <div class="modal-body">
+          <div class="modal-header">
+            <span class="modal-category" id="modal-category"></span>
+            <h2 class="modal-name" id="modal-title"></h2>
+            <div class="modal-price-row">
+              <p class="modal-price" id="modal-price"></p>
+              <span class="modal-badge" id="modal-badge"></span>
+            </div>
+          </div>
+
+          <p class="modal-long-desc" id="modal-long-desc"></p>
+
+          <div class="modal-specs" id="modal-specs">
+            <dl>
+              <div class="spec-row">
+                <dt>Materials</dt>
+                <dd id="modal-materials"></dd>
+              </div>
+              <div class="spec-row">
+                <dt>Dimensions</dt>
+                <dd id="modal-dimensions"></dd>
+              </div>
+              <div class="spec-row">
+                <dt>Care</dt>
+                <dd id="modal-care"></dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="seed-block" id="seed-block">
+            <button class="seed-toggle" id="seed-toggle" type="button">
+              <span class="seed-icon">◼</span> generation seed
+              <span class="seed-chevron">▸</span>
+            </button>
+            <div class="seed-content" id="seed-content" hidden>
+              <p class="seed-model" id="seed-model"></p>
+              <p class="seed-num">seed: <code id="seed-num"></code></p>
+              <pre class="seed-prompt" id="seed-prompt"></pre>
+              <div class="seed-variants" id="seed-variants"></div>
+              <button class="seed-copy-btn" id="seed-copy-btn" type="button">Copy Prompt</button>
+            </div>
+          </div>
+
+          <div class="modal-actions">
+            <div class="action-tabs" role="tablist">
+              <button class="tab-btn active" role="tab" data-tab="interest" aria-selected="true">Express Interest</button>
+              <button class="tab-btn" role="tab" data-tab="purchase" aria-selected="false">Claim &amp; Pay</button>
+            </div>
+
+            <div class="tab-panel" data-panel="interest" role="tabpanel">
+              <form class="interest-form" id="interest-form" novalidate>
+                <div class="form-row">
+                  <input type="text" name="name" placeholder="Your name" autocomplete="name">
+                </div>
+                <div class="form-row">
+                  <input type="email" name="email" placeholder="Email address" required autocomplete="email">
+                </div>
+                <div class="form-row">
+                  <textarea name="note" placeholder="Any questions or notes (optional)" rows="3"></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send Interest →</button>
+              </form>
+              <div class="form-success" id="form-success" hidden>
+                <div class="success-icon">✓</div>
+                <p>Interest noted. We'll be in touch within 48 hours.</p>
+              </div>
+            </div>
+
+            <div class="tab-panel hidden" data-panel="purchase" role="tabpanel">
+              <div class="purchase-panel">
+                <p class="purchase-desc" id="purchase-desc"></p>
+                <a class="purchase-link" id="purchase-link" href="#" target="_blank" rel="noopener noreferrer">
+                  Proceed to Secure Checkout →
+                </a>
+                <p class="purchase-note">Powered by Stripe · 256-bit encryption · No account required</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ─── END MODAL ─── -->
+
+    <!-- ─── TEMPLATES ─── -->
     <template id="category-template">
       <section class="category reveal">
         <header class="category-header">
-          <p class="category-kicker"></p>
-          <h2></h2>
+          <div>
+            <p class="category-kicker"></p>
+            <h2></h2>
+            <p class="category-tagline"></p>
+          </div>
         </header>
         <div class="product-grid"></div>
       </section>
@@ -99,16 +183,25 @@
           <div class="image-shell">
             <img class="product-image" loading="lazy" alt="">
             <div class="image-fallback" aria-hidden="true"></div>
+            <div class="image-count-badge" aria-hidden="true"></div>
           </div>
           <div class="product-meta">
-            <h3></h3>
+            <div class="product-top">
+              <h3></h3>
+              <span class="product-limit-badge"></span>
+            </div>
             <p class="product-price"></p>
             <p class="product-description"></p>
-            <span class="product-cta">arriving soon</span>
           </div>
         </button>
+        <div class="product-footer">
+          <button class="claim-btn" type="button" data-id="">
+            <span class="claim-label">Claim This</span>
+          </button>
+        </div>
       </article>
     </template>
+    <!-- ─── END TEMPLATES ─── -->
 
     <script type="module" src="/app.js"></script>
   </body>

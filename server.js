@@ -12,19 +12,31 @@ export function createApp() {
   app.disable('x-powered-by');
   app.set('trust proxy', true);
 
+  app.use(express.json());
+
+  // Interest form endpoint — stores to server-side log (swap for DB/email in production)
+  app.post('/api/interest', (req, res) => {
+    const { name, email, note, product_id, product_name } = req.body || {};
+    if (!email || !product_id) return res.status(400).json({ ok: false, error: 'Missing required fields' });
+    const entry = { ts: new Date().toISOString(), name, email, note, product_id, product_name };
+    console.log('[INTEREST]', JSON.stringify(entry));
+    res.json({ ok: true });
+  });
+
   app.use(
     helmet({
       contentSecurityPolicy: {
         directives: {
           defaultSrc: ["'self'"],
-          imgSrc: ["'self'", 'data:', 'https://images.pexels.com'],
+          imgSrc: ["'self'", 'data:', 'https://picsum.photos', 'https://fastly.picsum.photos'],
           styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
           fontSrc: ["'self'", 'https://fonts.gstatic.com'],
-          scriptSrc: ["'self'"],
-          connectSrc: ["'self'"],
+          scriptSrc: ["'self'", 'https://js.stripe.com'],
+          connectSrc: ["'self'", 'https://api.stripe.com'],
+          frameSrc: ["'self'", 'https://js.stripe.com'],
           objectSrc: ["'none'"],
           baseUri: ["'self'"],
-          formAction: ["'self'"],
+          formAction: ["'self'", 'https://js.stripe.com'],
           upgradeInsecureRequests: []
         }
       },
