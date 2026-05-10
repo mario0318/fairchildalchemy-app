@@ -31,9 +31,8 @@
           "dimensions": "15cm globe · 22cm total height on stand",
           "care": "Dust with microfiber. Avoid prolonged direct sunlight — the internal glass acts as a lens and can concentrate heat.",
           "image_urls": [
-            "https://picsum.photos/seed/fca-globe-smoke-a/820/920",
-            "https://picsum.photos/seed/fca-globe-smoke-b/820/920",
-            "https://picsum.photos/seed/fca-globe-smoke-night/820/920"
+            "/images/obsidian-smoke-globe-a.jpg",
+            "/images/obsidian-smoke-globe-b.jpg"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -65,9 +64,7 @@
           "dimensions": "25cm total · 15cm blade · 10cm handle",
           "care": "Oil blade lightly with camellia oil monthly. Keep dry. The etch patina deepens with handling — this is correct.",
           "image_urls": [
-            "https://picsum.photos/seed/fca-damascus-blade-a/820/920",
-            "https://picsum.photos/seed/fca-damascus-blade-b/820/920",
-            "https://picsum.photos/seed/fca-damascus-blade-macro/820/920"
+            "/images/damascus-letter-opener-a.jpg"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
