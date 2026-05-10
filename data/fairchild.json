@@ -64,7 +64,8 @@
           "dimensions": "25cm total · 15cm blade · 10cm handle",
           "care": "Oil blade lightly with camellia oil monthly. Keep dry. The etch patina deepens with handling — this is correct.",
           "image_urls": [
-            "/images/damascus-letter-opener-a.jpg"
+            "/images/damascus-letter-opener-a.jpg",
+            "/images/damascus-letter-opener-b.jpg"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -96,8 +97,8 @@
           "dimensions": "12cm diameter · 1.4kg",
           "care": "The patina is fully stable. Handling will burnish contact points over time — this is the intended finish evolution.",
           "image_urls": [
-            "https://picsum.photos/seed/fca-bronze-sphere-a/820/920",
-            "https://picsum.photos/seed/fca-bronze-sphere-b/820/920"
+            "/images/bronze-celestial-weight-a.jpg",
+            "/images/bronze-celestial-weight-b.jpg"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -128,9 +129,8 @@
           "dimensions": "28cm height · 18cm base diameter",
           "care": "Allow the patina to develop naturally. A living copper surface is part of the object's biography. Interior tin: rinse with cool water only.",
           "image_urls": [
-            "https://picsum.photos/seed/fca-copper-still-a/820/920",
-            "https://picsum.photos/seed/fca-copper-still-b/820/920",
-            "https://picsum.photos/seed/fca-copper-still-botanicals/820/920"
+            "/images/copper-still-vessel-a.jpg",
+            "/images/copper-still-vessel-b.jpg"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -171,8 +171,8 @@
           "dimensions": "15cm diameter",
           "care": "No maintenance required. Ensure moderate ambient light. The refractive fluid is factory-sealed for life.",
           "image_urls": [
-            "https://picsum.photos/seed/fca-mova-earth-a/820/920",
-            "https://picsum.photos/seed/fca-mova-earth-b/820/920"
+            "/images/mova-globe-earth-a.jpg",
+            "/images/mova-globe-earth-b.jpg"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -202,8 +202,8 @@
           "dimensions": "14cm width · 8cm height · 5cm depth · 340g",
           "care": "Tarnish can be reversed with a light application of brass polish. The patina is a choice, not a flaw.",
           "image_urls": [
-            "https://picsum.photos/seed/fca-brass-calendar-a/820/920",
-            "https://picsum.photos/seed/fca-brass-calendar-b/820/920"
+            "/images/meridian-calendar-a.jpg",
+            "/images/meridian-calendar-b.jpg"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -232,8 +232,8 @@
           "dimensions": "86cm × 38cm · 3mm thickness",
           "care": "Apply a light coat of neatsfoot oil every 6–12 months. It will age — that aging is the object becoming yours.",
           "image_urls": [
-            "https://picsum.photos/seed/fca-vachetta-pad-a/820/920",
-            "https://picsum.photos/seed/fca-vachetta-pad-aged/820/920"
+            "/images/vachetta-desk-pad-a.jpg",
+            "/images/vachetta-desk-pad-b.jpg"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -263,8 +263,8 @@
           "dimensions": "7.6cm wingspan · 148g",
           "care": "Polish with microfiber to maintain mirror finish. Bearing is sealed and maintenance-free.",
           "image_urls": [
-            "https://picsum.photos/seed/fca-brass-spinner-a/820/920",
-            "https://picsum.photos/seed/fca-brass-spinner-spin/820/920"
+            "/images/aerospace-fidget-spinner-a.jpg",
+            "/images/aerospace-fidget-spinner-b.jpg"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -301,8 +301,8 @@
           "dimensions": "Set of 3 · 6cm / 8cm / 10cm heights",
           "care": "Avoid prolonged water contact. Wipe dry after use. Do not use soap — it strips the seasoning.",
           "image_urls": [
-            "https://picsum.photos/seed/fca-tsuru-cranes-a/820/920",
-            "https://picsum.photos/seed/fca-tsuru-cranes-smoke/820/920"
+            "/images/tsuru-incense-holder-a.jpg",
+            "/images/tsuru-incense-holder-b.jpg"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -332,9 +332,8 @@
           "dimensions": "Dripper: 13cm height · Cup: 280ml · 9cm height",
           "care": "Dishwasher safe but hand-wash recommended to preserve glaze character. Patina deepens with repeated coffee contact.",
           "image_urls": [
-            "https://picsum.photos/seed/fca-wabi-pour-a/820/920",
-            "https://picsum.photos/seed/fca-wabi-pour-b/820/920",
-            "https://picsum.photos/seed/fca-wabi-pour-brew/820/920"
+            "/images/wabi-ceramic-pour-set-a.jpg",
+            "/images/wabi-ceramic-pour-set-b.jpg"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -367,8 +366,8 @@
           "dimensions": "9cm height · 7cm diameter · 240g · ~40hr burn time",
           "care": "Trim wick to 6mm before each burn. First burn: allow the full melt pool to form before extinguishing.",
           "image_urls": [
-            "https://picsum.photos/seed/fca-fig-candle-a/820/920",
-            "https://picsum.photos/seed/fca-fig-candle-lit/820/920"
+            "/images/fig-cypress-candle-a.jpg",
+            "/images/fig-cypress-candle-b.jpg"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -398,8 +397,8 @@
           "dimensions": "8 stones · avg 3cm each · Pouch: 12cm × 9cm",
           "care": "Rinse stones and air-dry before returning to pouch. Do not freeze inside the leather pouch.",
           "image_urls": [
-            "https://picsum.photos/seed/fca-marble-stones-a/820/920",
-            "https://picsum.photos/seed/fca-marble-stones-glass/820/920"
+            "/images/highland-whisky-stones-a.jpg",
+            "/images/highland-whisky-stones-b.jpg"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -438,9 +437,8 @@
           "dimensions": "A5 · 21cm × 14.8cm · 320 pages · 20mm spine",
           "care": "Keep dry. The kozo cover can be spot-cleaned with a barely damp cloth and air-dried flat.",
           "image_urls": [
-            "https://picsum.photos/seed/fca-coptic-journal-a/820/920",
-            "https://picsum.photos/seed/fca-coptic-journal-open/820/920",
-            "https://picsum.photos/seed/fca-coptic-journal-spine/820/920"
+            "/images/coptic-journal-a.jpg",
+            "/images/coptic-journal-b.jpg"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -470,8 +468,8 @@
           "dimensions": "9cm diameter assembled · 12 interlocking pieces",
           "care": "Keep dry. Danish oil can be refreshed annually with a light wipe. Do not force pieces.",
           "image_urls": [
-            "https://picsum.photos/seed/fca-gravity-sphere-a/820/920",
-            "https://picsum.photos/seed/fca-gravity-sphere-open/820/920"
+            "/images/gravity-paradox-sphere-a.jpg",
+            "/images/gravity-paradox-sphere-b.jpg"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -501,8 +499,8 @@
           "dimensions": "10cm compass diameter · 14cm base diameter · 580g",
           "care": "Keep away from strong magnets and speaker systems. Brass polish annually if desired.",
           "image_urls": [
-            "https://picsum.photos/seed/fca-compass-brass-a/820/920",
-            "https://picsum.photos/seed/fca-compass-brass-detail/820/920"
+            "/images/maritime-compass-weight-a.jpg",
+            "/images/maritime-compass-weight-b.jpg"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
