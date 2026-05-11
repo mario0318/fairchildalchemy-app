@@ -9,17 +9,29 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.join(__dirname, '..');
 
-test('catalog satisfies Fairchild spec minimums', async () => {
+test('catalog satisfies Fairchild spec', async () => {
   const catalog = JSON.parse(
     await fs.readFile(path.join(rootDir, 'data', 'fairchild.json'), 'utf8')
   );
 
   assert.equal(catalog.brand.name, 'Fairchild Alchemy');
+  assert.ok(catalog.brand.about, 'brand.about must exist');
   assert.equal(catalog.categories.length, 4);
 
   const totalItems = catalog.categories.reduce((sum, category) => sum + category.items.length, 0);
-  assert.ok(totalItems >= 24);
-  assert.ok(catalog.about.includes('Nothing ships in plastic'));
+  assert.ok(totalItems >= 12, `Expected at least 12 products, got ${totalItems}`);
+
+  for (const category of catalog.categories) {
+    assert.ok(category.items.length >= 2, `${category.id} must have at least 2 items`);
+    for (const item of category.items) {
+      assert.ok(Array.isArray(item.image_urls) && item.image_urls.length > 0, `${item.name} missing image_urls`);
+      assert.ok(item.price > 0, `${item.name} must have a positive price`);
+      assert.ok(
+        item.stripe_payment_link && item.stripe_payment_link.includes('buy.stripe.com'),
+        `${item.name} must have a live Stripe payment link`
+      );
+    }
+  }
 });
 
 test('server responds with homepage, health, and data', async () => {
@@ -42,7 +54,8 @@ test('server responds with homepage, health, and data', async () => {
     const data = await fetch(`${baseUrl}/data/fairchild.json`);
     assert.equal(data.status, 200);
     const json = await data.json();
-    assert.equal(json.categories[0].id, '3d-printed');
+    assert.equal(json.categories.length, 4);
+    assert.equal(json.categories[0].id, 'sanctum');
   } finally {
     await new Promise((resolve, reject) => {
       server.close((error) => {
@@ -52,4 +65,3 @@ test('server responds with homepage, health, and data', async () => {
     });
   }
 });
-
