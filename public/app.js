@@ -10,9 +10,6 @@ const collectionRoot = document.querySelector('#collection');
 const categoryTemplate = document.querySelector('#category-template');
 const productTemplate = document.querySelector('#product-template');
 const toast = document.querySelector('#toast');
-const heroImage = document.querySelector('#hero-image');
-const heroName = document.querySelector('#hero-name');
-const heroDescription = document.querySelector('#hero-description');
 const aboutCopy = document.querySelector('#about-copy');
 const itemCount = document.querySelector('[data-item-count]');
 const contactForm = document.querySelector('#contact-form');
@@ -265,15 +262,6 @@ function renderCategories(data) {
   const totalItems = data.categories.reduce((s, c) => s + c.items.length, 0);
   itemCount.textContent = String(totalItems);
   aboutCopy.textContent = data.brand.about;
-
-  // Hero - prefer a modern desk/gadget object when present.
-  const allItems = data.categories.flatMap(category => category.items.map(item => ({ ...item, _categoryId: category.id })));
-  const heroSource = allItems.find(item => item.id === 'mova-globe-earth') || allItems[0];
-  heroImage.alt = heroSource.name;
-  heroName.textContent = heroSource.name;
-  heroDescription.textContent = heroSource.short_description;
-  setImageState(heroImage, document.querySelector('.hero-image-fallback'));
-  heroImage.src = heroSource.image_urls?.[0] || '';
 
   for (const category of data.categories) {
     const catNode = categoryTemplate.content.firstElementChild.cloneNode(true);
