@@ -3,14 +3,14 @@
     "name": "Fairchild Alchemy",
     "tagline": "Transmutation of matter and meaning.",
     "contact_email": "hello@fairchildalchemy.com",
-    "about": "We collect, commission, and occasionally make things that resist disposal. Every object earns its shelf."
+    "about": "Fairchild Alchemy gathers useful curiosities with a modern hand: kinetic desk pieces, natural materials, quiet technology, ritual tools, and conversation objects chosen for the way they hold attention."
   },
   "categories": [
     {
       "id": "sanctum",
-      "name": "The Sanctum",
+      "name": "Wonder Cabinet",
       "symbol": "☿",
-      "tagline": "Made by hand. Strictly limited. Never restocked.",
+      "tagline": "Limited mantle pieces and shelf objects with material presence.",
       "items": [
         {
           "id": "obsidian-smoke-globe",
@@ -31,8 +31,8 @@
           "dimensions": "15cm globe · 22cm total height on stand",
           "care": "Dust with microfiber. Avoid prolonged direct sunlight — the internal glass acts as a lens and can concentrate heat.",
           "image_urls": [
-            "/images/obsidian-smoke-globe-a.jpg",
-            "/images/obsidian-smoke-globe-b.jpg"
+            "/images/thumb-sources/obsidian-smoke-globe-a.png",
+            "/images/thumb-sources/obsidian-smoke-globe-b.png"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -44,7 +44,8 @@
               "overhead bird's-eye on white Carrara marble, even diffuse window light"
             ]
           },
-          "stripe_payment_link": "https://buy.stripe.com/9B69AU5kH3Vgadne5fdnW00"
+          "stripe_payment_link": "https://buy.stripe.com/7sY00j0x68d5gEfgSTdfG08",
+          "stripe_price_id": "price_1Ta2LhFNRbo7Pu51CiajOyQy"
         },
         {
           "id": "damascus-letter-opener",
@@ -64,8 +65,8 @@
           "dimensions": "25cm total · 15cm blade · 10cm handle",
           "care": "Oil blade lightly with camellia oil monthly. Keep dry. The etch patina deepens with handling — this is correct.",
           "image_urls": [
-            "/images/damascus-letter-opener-a.jpg",
-            "/images/damascus-letter-opener-b.jpg"
+            "/images/thumb-sources/damascus-letter-opener-a.png",
+            "/images/thumb-sources/damascus-letter-opener-b.png"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -77,7 +78,8 @@
               "held in clean hand against dark backdrop showing scale and natural grip position"
             ]
           },
-          "stripe_payment_link": "https://buy.stripe.com/dRm8wQ00n4Zk2KVd1bdnW01"
+          "stripe_payment_link": "https://buy.stripe.com/9B67sL5RqeBt0FhbyzdfG09",
+          "stripe_price_id": "price_1Ta2LiFNRbo7Pu51KpBnZUiY"
         },
         {
           "id": "bronze-celestial-weight",
@@ -97,8 +99,8 @@
           "dimensions": "12cm diameter · 1.4kg",
           "care": "The patina is fully stable. Handling will burnish contact points over time — this is the intended finish evolution.",
           "image_urls": [
-            "/images/bronze-celestial-weight-a.jpg",
-            "/images/bronze-celestial-weight-b.jpg"
+            "/images/thumb-sources/bronze-celestial-weight-a.png",
+            "/images/thumb-sources/bronze-celestial-weight-b.png"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -110,7 +112,8 @@
               "nighttime room scene: sphere on wooden shelf beside dimly lit reading lamp, ambient warm glow"
             ]
           },
-          "stripe_payment_link": "https://buy.stripe.com/eVqfZi8wTcrM4T30epdnW02"
+          "stripe_payment_link": "https://buy.stripe.com/aFa7sLcfO50T1Jl0TVdfG0a",
+          "stripe_price_id": "price_1Ta2LiFNRbo7Pu51batksfZ1"
         },
         {
           "id": "copper-still-vessel",
@@ -129,8 +132,8 @@
           "dimensions": "28cm height · 18cm base diameter",
           "care": "Allow the patina to develop naturally. A living copper surface is part of the object's biography. Interior tin: rinse with cool water only.",
           "image_urls": [
-            "/images/copper-still-vessel-a.jpg",
-            "/images/copper-still-vessel-b.jpg"
+            "/images/thumb-sources/copper-still-vessel-a.png",
+            "/images/thumb-sources/copper-still-vessel-b.png"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -142,15 +145,16 @@
               "evening mantelpiece: vessel beside open hardcover book and single lit pillar candle, candlelight only"
             ]
           },
-          "stripe_payment_link": "https://buy.stripe.com/6oU9AU8wTcrMbhr5yJdnW03"
+          "stripe_payment_link": "https://buy.stripe.com/4gM4gzfs0gJBcnZ1XZdfG0b",
+          "stripe_price_id": "price_1Ta2LjFNRbo7Pu51obZPB1tX"
         }
       ]
     },
     {
       "id": "study",
-      "name": "The Study",
+      "name": "Desk Instruments",
       "symbol": "⊞",
-      "tagline": "Objects for the surface you think on.",
+      "tagline": "Kinetic, tactile, and useful pieces for the surface you think on.",
       "items": [
         {
           "id": "mova-globe-earth",
@@ -171,8 +175,8 @@
           "dimensions": "15cm diameter",
           "care": "No maintenance required. Ensure moderate ambient light. The refractive fluid is factory-sealed for life.",
           "image_urls": [
-            "/images/mova-globe-earth-a.jpg",
-            "/images/mova-globe-earth-b.jpg"
+            "/images/thumb-sources/mova-globe-earth-a.png",
+            "/images/thumb-sources/mova-globe-earth-b.png"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -183,7 +187,8 @@
               "macro detail of cartographic surface through acrylic sphere showing 19th-century relief print texture and sepia tones"
             ]
           },
-          "stripe_payment_link": "https://buy.stripe.com/fZudRadRd2Rc71b2mxdnW04"
+          "stripe_payment_link": "https://buy.stripe.com/28E00jfs03WPafRbyzdfG0c",
+          "stripe_price_id": "price_1Ta2LkFNRbo7Pu51NhqRE0be"
         },
         {
           "id": "meridian-calendar",
@@ -202,8 +207,8 @@
           "dimensions": "14cm width · 8cm height · 5cm depth · 340g",
           "care": "Tarnish can be reversed with a light application of brass polish. The patina is a choice, not a flaw.",
           "image_urls": [
-            "/images/meridian-calendar-a.jpg",
-            "/images/meridian-calendar-b.jpg"
+            "/images/thumb-sources/meridian-calendar-a.png",
+            "/images/thumb-sources/meridian-calendar-b.png"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -214,7 +219,8 @@
               "three-quarter view showing all three dials from slightly above, dark moody background, warm raking light"
             ]
           },
-          "stripe_payment_link": "https://buy.stripe.com/bJe9AU6oLcrM3OZaT3dnW05"
+          "stripe_payment_link": "https://buy.stripe.com/7sYfZhbbK791ew70TVdfG0d",
+          "stripe_price_id": "price_1Ta2LkFNRbo7Pu51u6eNqhjc"
         },
         {
           "id": "vachetta-desk-pad",
@@ -232,8 +238,8 @@
           "dimensions": "86cm × 38cm · 3mm thickness",
           "care": "Apply a light coat of neatsfoot oil every 6–12 months. It will age — that aging is the object becoming yours.",
           "image_urls": [
-            "/images/vachetta-desk-pad-a.jpg",
-            "/images/vachetta-desk-pad-b.jpg"
+            "/images/thumb-sources/vachetta-desk-pad-a.png",
+            "/images/thumb-sources/vachetta-desk-pad-b.png"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -244,7 +250,8 @@
               "same pad after 18 months use with rich caramel honey patina, light coffee ring and pen marks visible"
             ]
           },
-          "stripe_payment_link": "https://buy.stripe.com/eVq5kE4gDajE85faT3dnW06"
+          "stripe_payment_link": "https://buy.stripe.com/9B6bJ12Fe9h91JlcCDdfG0e",
+          "stripe_price_id": "price_1Ta2LlFNRbo7Pu51ALtyYdwu"
         },
         {
           "id": "aerospace-fidget-spinner",
@@ -263,8 +270,8 @@
           "dimensions": "7.6cm wingspan · 148g",
           "care": "Polish with microfiber to maintain mirror finish. Bearing is sealed and maintenance-free.",
           "image_urls": [
-            "/images/aerospace-fidget-spinner-a.jpg",
-            "/images/aerospace-fidget-spinner-b.jpg"
+            "/images/thumb-sources/aerospace-fidget-spinner-a.png",
+            "/images/thumb-sources/aerospace-fidget-spinner-b.png"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -275,15 +282,16 @@
               "exploded flat-lay showing spinner body, ceramic bearing cap, and bearing separated by 3cm on dark surface"
             ]
           },
-          "stripe_payment_link": "https://buy.stripe.com/3cI5kE00n8bwadn0epdnW07"
+          "stripe_payment_link": "https://buy.stripe.com/aFa5kD5RqfFx5ZBauvdfG0f",
+          "stripe_price_id": "price_1Ta2LmFNRbo7Pu51E9TJULH7"
         }
       ]
     },
     {
       "id": "ritual",
-      "name": "Ritual Objects",
+      "name": "Ritual Utility",
       "symbol": "⌘",
-      "tagline": "Things that reward daily use.",
+      "tagline": "Useful objects for coffee, scent, flame, stone, and decompression.",
       "items": [
         {
           "id": "tsuru-incense-holder",
@@ -301,8 +309,8 @@
           "dimensions": "Set of 3 · 6cm / 8cm / 10cm heights",
           "care": "Avoid prolonged water contact. Wipe dry after use. Do not use soap — it strips the seasoning.",
           "image_urls": [
-            "/images/tsuru-incense-holder-a.jpg",
-            "/images/tsuru-incense-holder-b.jpg"
+            "/images/thumb-sources/tsuru-incense-holder-a.png",
+            "/images/thumb-sources/tsuru-incense-holder-b.png"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -313,7 +321,8 @@
               "all three cranes lit from below by small candle, dramatic low uplight, dark room, smoke wisps"
             ]
           },
-          "stripe_payment_link": "https://buy.stripe.com/6oU8wQ4gD8bw4T33qBdnW08"
+          "stripe_payment_link": "https://buy.stripe.com/8x200jbbK79173FbyzdfG0g",
+          "stripe_price_id": "price_1Ta2LmFNRbo7Pu51EqjyrOqk"
         },
         {
           "id": "wabi-ceramic-pour-set",
@@ -332,8 +341,8 @@
           "dimensions": "Dripper: 13cm height · Cup: 280ml · 9cm height",
           "care": "Dishwasher safe but hand-wash recommended to preserve glaze character. Patina deepens with repeated coffee contact.",
           "image_urls": [
-            "/images/wabi-ceramic-pour-set-a.jpg",
-            "/images/wabi-ceramic-pour-set-b.jpg"
+            "/images/thumb-sources/wabi-ceramic-pour-set-a.png",
+            "/images/thumb-sources/wabi-ceramic-pour-set-b.png"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -345,7 +354,8 @@
               "lifestyle: hands holding cup of black coffee, morning window light, blurred plants in background"
             ]
           },
-          "stripe_payment_link": "https://buy.stripe.com/9B65kE28v8bw71b7GRdnW09"
+          "stripe_payment_link": "https://buy.stripe.com/aFa7sLa7GfFxfAb0TVdfG0h",
+          "stripe_price_id": "price_1Ta2LnFNRbo7Pu51SOW7X2pI"
         },
         {
           "id": "fig-cypress-candle",
@@ -366,8 +376,8 @@
           "dimensions": "9cm height · 7cm diameter · 240g · ~40hr burn time",
           "care": "Trim wick to 6mm before each burn. First burn: allow the full melt pool to form before extinguishing.",
           "image_urls": [
-            "/images/fig-cypress-candle-a.jpg",
-            "/images/fig-cypress-candle-b.jpg"
+            "/images/thumb-sources/fig-cypress-candle-a.png",
+            "/images/thumb-sources/fig-cypress-candle-b.png"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -378,7 +388,8 @@
               "nighttime: single lit candle on dark wood table casting warm amber pool, nothing else visible"
             ]
           },
-          "stripe_payment_link": "https://buy.stripe.com/7sY3cw9AXezU85faT3dnW0a"
+          "stripe_payment_link": "https://buy.stripe.com/bJe4gz93Cdxp0FhgSTdfG0i",
+          "stripe_price_id": "price_1Ta2LoFNRbo7Pu51Xi2splUE"
         },
         {
           "id": "highland-whisky-stones",
@@ -397,8 +408,8 @@
           "dimensions": "8 stones · avg 3cm each · Pouch: 12cm × 9cm",
           "care": "Rinse stones and air-dry before returning to pouch. Do not freeze inside the leather pouch.",
           "image_urls": [
-            "/images/highland-whisky-stones-a.jpg",
-            "/images/highland-whisky-stones-b.jpg"
+            "/images/thumb-sources/highland-whisky-stones-a.png",
+            "/images/thumb-sources/highland-whisky-stones-b.png"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -409,15 +420,16 @@
               "lifestyle: two crystal old-fashioned glasses with stones and amber whisky, dark bar setting, warm glow"
             ]
           },
-          "stripe_payment_link": "https://buy.stripe.com/dRm6oI9AXbnI85f6CNdnW0b"
+          "stripe_payment_link": "https://buy.stripe.com/00waEXdjS0KDbjVdGHdfG0j",
+          "stripe_price_id": "price_1Ta2LoFNRbo7Pu51YAAkszJK"
         }
       ]
     },
     {
       "id": "library",
-      "name": "The Library",
+      "name": "Mind Toys",
       "symbol": "☽",
-      "tagline": "For the mind that still prefers a physical object.",
+      "tagline": "Puzzles, journals, and navigational curiosities for grown-up play.",
       "items": [
         {
           "id": "coptic-journal",
@@ -437,8 +449,8 @@
           "dimensions": "A5 · 21cm × 14.8cm · 320 pages · 20mm spine",
           "care": "Keep dry. The kozo cover can be spot-cleaned with a barely damp cloth and air-dried flat.",
           "image_urls": [
-            "/images/coptic-journal-a.jpg",
-            "/images/coptic-journal-b.jpg"
+            "/images/thumb-sources/coptic-journal-a.png",
+            "/images/thumb-sources/coptic-journal-b.png"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -450,7 +462,8 @@
               "extreme macro of Coptic stitch showing linen thread pattern and bookboard edge detail, f/2.8"
             ]
           },
-          "stripe_payment_link": "https://buy.stripe.com/4gM4gA7sP77s85ff9jdnW0c"
+          "stripe_payment_link": "https://buy.stripe.com/aFa00j93Cdxp2Np0TVdfG0k",
+          "stripe_price_id": "price_1Ta2LpFNRbo7Pu512SrXAuew"
         },
         {
           "id": "gravity-paradox-sphere",
@@ -468,8 +481,8 @@
           "dimensions": "9cm diameter assembled · 12 interlocking pieces",
           "care": "Keep dry. Danish oil can be refreshed annually with a light wipe. Do not force pieces.",
           "image_urls": [
-            "/images/gravity-paradox-sphere-a.jpg",
-            "/images/gravity-paradox-sphere-b.jpg"
+            "/images/thumb-sources/gravity-paradox-sphere-a.png",
+            "/images/thumb-sources/gravity-paradox-sphere-b.png"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -480,7 +493,8 @@
               "hands assembling sphere, fingertips placing final piece, warm moody light, selective focus"
             ]
           },
-          "stripe_payment_link": "https://buy.stripe.com/5kQcN67sPezU71b2mxdnW0d"
+          "stripe_payment_link": "https://buy.stripe.com/dRmfZhcfO8d5fAb8mndfG0l",
+          "stripe_price_id": "price_1Ta2LqFNRbo7Pu51x5YyLoN6"
         },
         {
           "id": "maritime-compass-weight",
@@ -499,8 +513,8 @@
           "dimensions": "10cm compass diameter · 14cm base diameter · 580g",
           "care": "Keep away from strong magnets and speaker systems. Brass polish annually if desired.",
           "image_urls": [
-            "/images/maritime-compass-weight-a.jpg",
-            "/images/maritime-compass-weight-b.jpg"
+            "/images/thumb-sources/maritime-compass-weight-a.png",
+            "/images/thumb-sources/maritime-compass-weight-b.png"
           ],
           "generation_seed": {
             "model": "Midjourney v6 · DALL·E 3 · Stable Diffusion XL",
@@ -511,7 +525,8 @@
               "three-quarter view showing compass and base on open nautical chart map background, warm moody light"
             ]
           },
-          "stripe_payment_link": "https://buy.stripe.com/7sY14o8wTfDYdpze5fdnW0e"
+          "stripe_payment_link": "https://buy.stripe.com/4gMcN5fs0aldcnZ6efdfG0m",
+          "stripe_price_id": "price_1Ta2LqFNRbo7Pu510sTj5IVJ"
         }
       ]
     }

@@ -24,9 +24,10 @@ SPACE = "black-forest-labs/FLUX.1-schnell"
 
 STYLE_SUFFIX = (
     " Premium ecommerce product photograph for Fairchild Alchemy. "
-    "Dark botanical apothecary setting, near-black surface, aged brass accents, "
-    "soft amber side light, tactile materials, elegant and realistic. "
-    "Centered product, vertical product card crop, room above and below for typography. "
+    "Modern alchemy storefront styling: graphite stone, living greenery, brushed metal, "
+    "glass, ceramic, soft technical light, and authentic adult desk or shelf merchandise. "
+    "Avoid steampunk, gothic props, sepia antiques, heavy brown wood, and period-piece styling. "
+    "Centered product, vertical ecommerce product crop, realistic scale, clean negative space. "
     "No text, no logos, no watermark, no hands, no people."
 )
 

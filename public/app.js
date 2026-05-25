@@ -14,8 +14,9 @@ const heroImage = document.querySelector('#hero-image');
 const heroName = document.querySelector('#hero-name');
 const heroDescription = document.querySelector('#hero-description');
 const aboutCopy = document.querySelector('#about-copy');
-const contactLink = document.querySelector('#contact-link');
 const itemCount = document.querySelector('[data-item-count]');
+const contactForm = document.querySelector('#contact-form');
+const contactStatus = document.querySelector('#contact-status');
 
 const modalOverlay = document.querySelector('#modal-overlay');
 const modal = document.querySelector('#modal');
@@ -47,6 +48,46 @@ const interestForm = document.querySelector('#interest-form');
 const formSuccess = document.querySelector('#form-success');
 const purchaseDesc = document.querySelector('#purchase-desc');
 const purchaseLink = document.querySelector('#purchase-link');
+const filterButtons = document.querySelectorAll('.filter-btn');
+
+const FILTER_TAGS = {
+  all: () => true,
+  desktop: tags => tags.has('desktop'),
+  kinetic: tags => tags.has('kinetic'),
+  ritual: tags => tags.has('ritual'),
+  giftable: tags => tags.has('giftable')
+};
+
+function itemTags(item, categoryId) {
+  const text = [
+    item.id,
+    item.name,
+    item.short_description,
+    item.long_description,
+    ...(item.materials || [])
+  ].join(' ').toLowerCase();
+  const tags = new Set(['giftable']);
+
+  if (categoryId === 'study' || /desk|calendar|globe|letter|journal|bookmark|pad|weight/.test(text)) tags.add('desktop');
+  if (/spinner|fidget|puzzle|sphere|top|kinetic|gravity|rotating|mechanical/.test(text)) tags.add('kinetic');
+  if (categoryId === 'ritual' || /incense|candle|pour|tea|coffee|whisky|stone|smoke|ritual/.test(text)) tags.add('ritual');
+  if (/wireless|charging|light|circuit|lamp|mova|aerospace/.test(text)) tags.add('tech');
+
+  return tags;
+}
+
+function setImageState(img, fallback) {
+  fallback.hidden = false;
+  img.hidden = false;
+  img.addEventListener('load', () => {
+    fallback.hidden = true;
+    img.hidden = false;
+  });
+  img.addEventListener('error', () => {
+    img.hidden = true;
+    fallback.hidden = false;
+  });
+}
 
 // ─── Toast ────────────────────────────────────────────────────────────────────
 let toastTimer;
@@ -99,9 +140,11 @@ function setCarouselSlide(idx) {
   const urls = modalItem.image_urls || [];
   if (!urls.length) return;
   carouselIndex = ((idx % urls.length) + urls.length) % urls.length;
-  modalImg.src = urls[carouselIndex];
+  modalImg.hidden = false;
+  modalImgFallback.hidden = false;
   modalImg.alt = modalItem.name;
   modalImgFallback.textContent = modalItem._symbol || '☿';
+  modalImg.src = urls[carouselIndex];
 
   // Dots
   carouselDots.innerHTML = '';
@@ -218,19 +261,19 @@ function closeModal() {
 
 // ─── Catalog render ───────────────────────────────────────────────────────────
 function renderCategories(data) {
+  collectionRoot.innerHTML = '';
   const totalItems = data.categories.reduce((s, c) => s + c.items.length, 0);
   itemCount.textContent = String(totalItems);
   aboutCopy.textContent = data.brand.about;
-  contactLink.textContent = data.brand.contact_email;
-  contactLink.href = `mailto:${data.brand.contact_email}`;
 
-  // Hero — pick first limited item from first category
-  const heroSource = data.categories[0].items[0];
-  heroImage.src = heroSource.image_urls?.[0] || '';
+  // Hero - prefer a modern desk/gadget object when present.
+  const allItems = data.categories.flatMap(category => category.items.map(item => ({ ...item, _categoryId: category.id })));
+  const heroSource = allItems.find(item => item.id === 'mova-globe-earth') || allItems[0];
   heroImage.alt = heroSource.name;
   heroName.textContent = heroSource.name;
   heroDescription.textContent = heroSource.short_description;
-  heroImage.addEventListener('error', () => { heroImage.hidden = true; });
+  setImageState(heroImage, document.querySelector('.hero-image-fallback'));
+  heroImage.src = heroSource.image_urls?.[0] || '';
 
   for (const category of data.categories) {
     const catNode = categoryTemplate.content.firstElementChild.cloneNode(true);
@@ -251,9 +294,12 @@ function renderCategories(data) {
       // Image
       fallback.textContent = category.symbol;
       const firstImg = item.image_urls?.[0] || '';
-      img.src = firstImg;
       img.alt = item.name;
-      img.addEventListener('error', () => { img.hidden = true; });
+      setImageState(img, fallback);
+      img.src = firstImg;
+
+      const tags = itemTags(item, category.id);
+      pNode.dataset.tags = [...tags].join(' ');
 
       // Multi-image badge
       const imgCount = item.image_urls?.length || 0;
@@ -294,6 +340,22 @@ function renderCategories(data) {
 
     collectionRoot.append(catNode);
   }
+
+  applyFilter(document.querySelector('.filter-btn.active')?.dataset.filter || 'all');
+}
+
+function applyFilter(filter) {
+  const predicate = FILTER_TAGS[filter] || FILTER_TAGS.all;
+
+  document.querySelectorAll('.product-card').forEach(card => {
+    const tags = new Set((card.dataset.tags || '').split(' ').filter(Boolean));
+    card.hidden = !predicate(tags);
+  });
+
+  document.querySelectorAll('.category').forEach(category => {
+    const visible = category.querySelectorAll('.product-card:not([hidden])').length;
+    category.classList.toggle('is-empty', visible === 0);
+  });
 }
 
 // ─── Modal events ─────────────────────────────────────────────────────────────
@@ -303,6 +365,35 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal()
 
 carouselPrev.addEventListener('click', () => setCarouselSlide(carouselIndex - 1));
 carouselNext.addEventListener('click', () => setCarouselSlide(carouselIndex + 1));
+setImageState(modalImg, modalImgFallback);
+
+filterButtons.forEach(button => {
+  button.setAttribute('aria-pressed', String(button.classList.contains('active')));
+  button.addEventListener('click', () => {
+    filterButtons.forEach(btn => {
+      const active = btn === button;
+      btn.classList.toggle('active', active);
+      btn.setAttribute('aria-pressed', String(active));
+    });
+    applyFilter(button.dataset.filter || 'all');
+  });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    const hash = anchor.getAttribute('href');
+    if (!hash || hash === '#') return;
+    const target = document.querySelector(hash);
+    if (!target) return;
+
+    e.preventDefault();
+    target.scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+      block: 'start'
+    });
+    window.history.pushState(null, '', hash);
+  });
+});
 
 // Seed toggle
 seedToggle.addEventListener('click', () => {
@@ -378,10 +469,77 @@ interestForm.addEventListener('submit', async e => {
   showToast(`Interest noted for ${payload.product_name}.`);
 });
 
-// Purchase link click — also mark claimed
-purchaseLink.addEventListener('click', e => {
+// Purchase link click - create a branded Stripe Checkout Session, with Payment Link fallback.
+purchaseLink.addEventListener('click', async e => {
   if (purchaseLink.style.pointerEvents === 'none') { e.preventDefault(); return; }
-  if (modalItem) setClaimed(modalItem.id, 'claimed');
+  if (!modalItem) return;
+
+  e.preventDefault();
+  const fallbackUrl = modalItem.stripe_payment_link;
+  purchaseLink.setAttribute('aria-busy', 'true');
+  purchaseLink.textContent = 'Opening Checkout...';
+
+  try {
+    const res = await fetch('/api/checkout-session', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ product_id: modalItem.id })
+    });
+    const json = await res.json().catch(() => ({}));
+    if (!res.ok || !json.url) throw new Error(json.error || 'Checkout unavailable.');
+    setClaimed(modalItem.id, 'claimed');
+    window.location.href = json.url;
+  } catch (error) {
+    if (fallbackUrl) {
+      setClaimed(modalItem.id, 'claimed');
+      window.location.href = fallbackUrl;
+      return;
+    }
+    showToast(error.message || 'Checkout unavailable.');
+    purchaseLink.textContent = 'Proceed to Secure Checkout →';
+    purchaseLink.removeAttribute('aria-busy');
+  }
+});
+
+contactForm.addEventListener('submit', async e => {
+  e.preventDefault();
+  const formData = new FormData(contactForm);
+  const email = formData.get('email')?.trim();
+  const message = formData.get('message')?.trim();
+  const trap = formData.get('company')?.trim();
+
+  if (trap) return;
+  if (!email || !message) {
+    contactStatus.textContent = 'Email and message are required.';
+    return;
+  }
+
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+  contactStatus.textContent = '';
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: formData.get('name')?.trim() || '',
+        email,
+        message
+      })
+    });
+    const json = await res.json().catch(() => ({}));
+    if (!res.ok || !json.ok) throw new Error(json.error || 'Message delivery failed.');
+    contactForm.reset();
+    contactStatus.textContent = 'Message sent. It will arrive tagged as Fairchild Alchemy.';
+    showToast('Message sent.');
+  } catch (error) {
+    contactStatus.textContent = error.message || 'Message delivery failed.';
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Send Message';
+  }
 });
 
 // ─── Init ─────────────────────────────────────────────────────────────────────

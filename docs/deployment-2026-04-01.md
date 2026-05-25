@@ -4,7 +4,7 @@ Date: 2026-04-01
 
 ## Delivered
 
-- Standalone app directory at `C:\Users\Mario\fairchildalchemy-app`
+- Standalone app directory at `C:\Projects\fairchildalchemy-app`
 - Dedicated Cloud Run service: `fairchildalchemy-app`
 - Dedicated domain mappings:
   - `fairchildalchemy.com`

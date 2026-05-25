@@ -30,6 +30,10 @@ test('catalog satisfies Fairchild spec', async () => {
         item.stripe_payment_link && item.stripe_payment_link.includes('buy.stripe.com'),
         `${item.name} must have a live Stripe payment link`
       );
+      assert.ok(
+        item.stripe_price_id && item.stripe_price_id.startsWith('price_'),
+        `${item.name} must have a Stripe price for branded Checkout Sessions`
+      );
     }
   }
 });
@@ -45,7 +49,11 @@ test('server responds with homepage, health, and data', async () => {
   try {
     const home = await fetch(baseUrl);
     assert.equal(home.status, 200);
-    assert.match(await home.text(), /Fairchild Alchemy/);
+    const homeHtml = await home.text();
+    assert.match(homeHtml, /Fairchild Alchemy/);
+    assert.match(homeHtml, /Store Policies/);
+    assert.match(homeHtml, /Refunds & Disputes/);
+    assert.match(homeHtml, /US shipping address/);
 
     const health = await fetch(`${baseUrl}/healthz`);
     assert.equal(health.status, 200);
@@ -56,6 +64,34 @@ test('server responds with homepage, health, and data', async () => {
     const json = await data.json();
     assert.equal(json.categories.length, 4);
     assert.equal(json.categories[0].id, 'sanctum');
+
+    const contactMissing = await fetch(`${baseUrl}/api/contact`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: '', message: '' })
+    });
+    assert.equal(contactMissing.status, 400);
+
+    const contactUnconfigured = await fetch(`${baseUrl}/api/contact`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: 'QA', email: 'qa@example.com', message: 'Hello from test.' })
+    });
+    assert.equal(contactUnconfigured.status, 503);
+
+    const checkoutMissing = await fetch(`${baseUrl}/api/checkout-session`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ product_id: 'not-real' })
+    });
+    assert.equal(checkoutMissing.status, 404);
+
+    const checkoutUnconfigured = await fetch(`${baseUrl}/api/checkout-session`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ product_id: json.categories[0].items[0].id })
+    });
+    assert.equal(checkoutUnconfigured.status, 503);
   } finally {
     await new Promise((resolve, reject) => {
       server.close((error) => {

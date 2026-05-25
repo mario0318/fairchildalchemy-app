@@ -27,6 +27,20 @@ for (const relativeFile of requiredFiles) {
   console.log(`  ✓ ${relativeFile}`);
 }
 
+const homeHtml = await fs.readFile(path.join(rootDir, 'public', 'index.html'), 'utf8');
+for (const requiredText of [
+  'Store Policies',
+  'Shipping',
+  'Returns',
+  'Refunds & Disputes',
+  'Cancellations',
+  'Restrictions',
+  'Promotions',
+  'fairchildalchemy.com'
+]) {
+  assert.ok(homeHtml.includes(requiredText), `Homepage missing policy text: ${requiredText}`);
+}
+
 assert.equal(catalog.categories.length, 4, 'Expected exactly four categories');
 
 const totalItems = catalog.categories.reduce((sum, category) => sum + category.items.length, 0);
@@ -43,6 +57,10 @@ for (const category of catalog.categories) {
     assert.ok(
       item.stripe_payment_link && item.stripe_payment_link.includes('buy.stripe.com'),
       `${item.name} missing live Stripe payment link`
+    );
+    assert.ok(
+      item.stripe_price_id && item.stripe_price_id.startsWith('price_'),
+      `${item.name} missing Stripe price for branded Checkout Sessions`
     );
     // Verify local image files exist
     for (const imgPath of item.image_urls) {

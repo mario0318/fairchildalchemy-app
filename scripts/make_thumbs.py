@@ -7,7 +7,8 @@ import math, os, urllib.request
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 
-DEST = Path(r"C:\Users\Mario\fairchildalchemy-app\public\images")
+ROOT = Path(__file__).resolve().parents[1]
+DEST = ROOT / "public" / "images"
 DEST.mkdir(parents=True, exist_ok=True)
 
 SOURCE_ASSET_DIR = DEST / "thumb-sources"
@@ -29,7 +30,7 @@ TEXT_MAIN = (212, 200, 168)
 TEXT_DIM  = (140, 132, 106)
 
 # ─── Font download ─────────────────────────────────────────────────────────────
-FONT_DIR = Path(r"C:\Users\Mario\AppData\Roaming\Claude\local-agent-mode-sessions\ef19118e-830e-4123-84b3-01efb22b5bf1\1306654e-2607-4844-938a-58fe7bb3549f\local_0a1f2cea-9240-4abe-8cca-94f6cdc85e3c\outputs\fonts")
+FONT_DIR = ROOT / ".cache" / "fonts"
 FONT_DIR.mkdir(exist_ok=True)
 
 FONT_URLS = {

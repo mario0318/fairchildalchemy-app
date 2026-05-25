@@ -7,8 +7,11 @@ Standalone Cloud Run storefront for `fairchildalchemy.com`. Premium handmade obj
 - **Runtime**: Node.js + Express, served as a Cloud Run service
 - **Frontend**: Vanilla ES module JS, Cormorant Garamond + Syne Mono, no build step
 - **Catalog**: `/data/fairchild.json` — single source of truth for all products
-- **Payments**: Stripe Payment Links (live), one per product, injected into the catalog JSON
+- **Payments**: Stripe Payment Links, one per product, injected into the catalog JSON
 - **Interest capture**: `POST /api/interest` — logs name/email/note to stdout; swap for DB or email provider in production
+- **Contact form**: `POST /api/contact` — sends tagged messages through Resend when `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, and `CONTACT_FROM_EMAIL` are configured
+- **Branded checkout**: `POST /api/checkout-session` — creates a Stripe Checkout Session with Fairchild Alchemy branding and falls back to product Payment Links client-side
+- **Public policies**: homepage includes visible contact, shipping, returns, refund/dispute, cancellation, restriction, and promotion terms for Stripe website review
 
 ## Catalog structure (`data/fairchild.json`)
 
@@ -56,7 +59,7 @@ The seed is exposed in the product modal UI with a copy button. Angle variants d
 
 ## Stripe setup
 
-All 15 products and prices are created in the connected Stripe account. Payment links are live at `buy.stripe.com/...`.
+Payment links live in `data/fairchild.json` as `buy.stripe.com/...` URLs. Before launch, verify the connected Stripe account and organization in the Stripe dashboard match Fairchild Alchemy; do not assume the local connector account is the production organization.
 
 To add a new product:
 1. Create product + price in Stripe dashboard or via MCP
@@ -73,9 +76,43 @@ To update a price: create a new Stripe price, new payment link, update JSON, dep
 
 State is per-browser, per-device. For server-side tracking, wire `/api/interest` to a database or email service (Resend, Postmark, etc.).
 
+## Contact delivery
+
+Contact form messages use the subject prefix `[FAIRCHILD ALCHEMY CONTACT]`. Configure Cloud Run with:
+
+```bash
+RESEND_API_KEY=<secret>
+CONTACT_TO_EMAIL=<recipient>
+CONTACT_FROM_EMAIL=<verified sender>
+CONTACT_FROM_NAME="Fairchild Alchemy"
+```
+
+Branded checkout sessions require:
+
+```bash
+STRIPE_SECRET=<secret>
+FAIRCHILD_SITE_URL=https://fairchildalchemy.com
+STRIPE_CHECKOUT_LOGO_FILE=<Stripe business_logo file id>
+STRIPE_CHECKOUT_ICON_FILE=<Stripe business_icon file id>
+```
+
+Checkout Sessions collect card payment, US shipping address, and phone number for physical-goods fulfillment.
+
 ## Image serving
 
-Product images currently use [Lorem Picsum](https://picsum.photos) with deterministic seeds (`/seed/{slug}/{w}/{h}`). Replace `image_urls` arrays per item with real product photography or AI-generated images using the provided `generation_seed` prompts.
+Product images are local generated product photos under `public/images/thumb-sources/` and are referenced directly by `image_urls`. The framed JPG files in `public/images/` are legacy card renders; the storefront uses the cleaner source product photos so the objects read as real merchandise instead of poster art.
+
+To generate new product photos:
+
+```bash
+python scripts/gen_images.py --force
+```
+
+To regenerate legacy framed card renders from those source assets:
+
+```bash
+python scripts/make_thumbs.py
+```
 
 ## Local run
 

@@ -4,34 +4,49 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Fairchild Alchemy</title>
-    <meta name="description" content="Fairchild Alchemy. Transmutation of matter and meaning. Premium handmade objects, artisan curiosities, and things that resist disposal.">
+    <meta name="description" content="Fairchild Alchemy sells premium desk objects, kinetic curiosities, ritual goods, and crafted home pieces for adult spaces.">
     <meta name="theme-color" content="#0e0c08">
     <meta property="og:title" content="Fairchild Alchemy">
     <meta property="og:description" content="Transmutation of matter and meaning.">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600;1,700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-    <div class="grain" aria-hidden="true"></div>
+    <div class="page-bg" aria-hidden="true"></div>
 
-    <main class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Fairchild Alchemy home">
+        <span class="brand-sigil">☿</span>
+        <span>
+          <strong>Fairchild</strong>
+          <small>Alchemy</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#collection">Shop</a>
+        <a href="#craft">Craft</a>
+        <a href="#contact">Contact</a>
+        <a href="#policies">Policies</a>
+      </nav>
+      <a class="header-action" href="#collection">Browse</a>
+    </header>
+
+    <main id="top">
       <section class="hero reveal">
         <div class="hero-copy">
-          <p class="hero-mark">☿</p>
-          <p class="eyebrow">FAIRCHILD ALCHEMY</p>
-          <h1>transmutation of matter and meaning</h1>
-          <p class="hero-text">Premium handmade objects, artisan curiosities, and things that resist disposal. Every object earns its shelf.</p>
+          <h1>Objects that elevate the everyday</h1>
+          <p class="hero-text">Curated desk instruments, tactile curiosities, crafted rituals, and quiet technologies for modern alchemists.</p>
           <div class="hero-meta">
             <span><strong data-item-count>15</strong> objects</span>
-            <span><strong>4</strong> disciplines</span>
-            <span><strong>paper wrapped</strong> shipping</span>
+            <span><strong>4</strong> collections</span>
+            <span><strong>$46+</strong> entry point</span>
           </div>
-          <a class="hero-link" href="#collection">enter the collection</a>
+          <a class="hero-link" href="#collection">Explore the collection</a>
         </div>
         <figure class="hero-figure">
           <div class="hero-image-shell">
@@ -46,25 +61,81 @@
         </figure>
       </section>
 
-      <section class="intro reveal">
-        <div class="section-heading"><span>── the collection ──</span></div>
-        <p>Everything here is made, printed, or gathered with the same bias: hold onto what feels deliberate.</p>
+      <section class="filter-bar reveal" aria-label="Product filters">
+        <button class="filter-btn active" type="button" data-filter="all">All</button>
+        <button class="filter-btn" type="button" data-filter="desktop">Desk Objects</button>
+        <button class="filter-btn" type="button" data-filter="kinetic">Kinetic & Fidget</button>
+        <button class="filter-btn" type="button" data-filter="ritual">Ritual & Wellness</button>
+        <button class="filter-btn" type="button" data-filter="giftable">Giftable</button>
       </section>
 
-      <section id="collection" class="collection" aria-live="polite"></section>
+      <section id="collection" class="collection" aria-live="polite" aria-label="Fairchild Alchemy collection"></section>
 
-      <section class="about reveal">
-        <div class="section-heading"><span>── about the practice ──</span></div>
-        <p id="about-copy"></p>
+      <section id="craft" class="craft reveal">
+        <div>
+          <h2>Modern curiosities for desks, shelves, rituals, and slow attention.</h2>
+          <p id="about-copy"></p>
+        </div>
       </section>
 
-      <section class="contact reveal">
-        <div class="section-heading"><span>── contact ──</span></div>
-        <a id="contact-link" href="mailto:hello@fairchildalchemy.com">hello@fairchildalchemy.com</a>
+      <section id="contact" class="contact reveal">
+        <div class="contact-copy">
+          <span>Contact</span>
+          <h2>Ask about an object, a commission, or a sourcing idea.</h2>
+          <p>Use this form for customer service, order questions, returns, sourcing requests, and product details. Messages are tagged for Fairchild Alchemy before delivery.</p>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <input type="text" name="name" placeholder="Your name" autocomplete="name">
+          <input type="email" name="email" placeholder="Email address" required autocomplete="email">
+          <textarea name="message" placeholder="Message" rows="4" required></textarea>
+          <input class="contact-trap" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button type="submit">Send Message</button>
+          <p class="contact-status" id="contact-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="policies" class="policies reveal" aria-labelledby="policies-title">
+        <div class="policies-copy">
+          <span>Store Policies</span>
+          <h2 id="policies-title">Clear terms for physical goods.</h2>
+          <p>Fairchild Alchemy sells desk objects, kinetic curiosities, crafted home goods, ritual objects, and giftable instruments for adult spaces. Orders currently ship within the United States.</p>
+        </div>
+        <div class="policy-grid">
+          <article class="policy-item">
+            <h3>Shipping</h3>
+            <p>Checkout collects a US shipping address and phone number. Ready-to-ship items are prepared in 3-7 business days unless the product page or follow-up message states otherwise.</p>
+          </article>
+          <article class="policy-item">
+            <h3>Returns</h3>
+            <p>Unused, undamaged physical goods may be returned within 14 days of delivery. Return shipping is the buyer's responsibility unless an item arrives damaged or incorrect.</p>
+          </article>
+          <article class="policy-item">
+            <h3>Refunds & Disputes</h3>
+            <p>Refunds are issued to the original payment method after returned goods are inspected. If something arrives damaged, contact us with photos within 7 days so we can resolve it before a dispute is needed.</p>
+          </article>
+          <article class="policy-item">
+            <h3>Cancellations</h3>
+            <p>Orders can be cancelled before fulfillment begins. Limited, commissioned, customized, consumable, or used goods may be final sale once work or shipment has started.</p>
+          </article>
+          <article class="policy-item">
+            <h3>Restrictions</h3>
+            <p>Products are decorative, functional, or collectible objects for adults. They are not children's toys. Some sharp, fragile, heated, scented, or small-component items require careful handling.</p>
+          </article>
+          <article class="policy-item">
+            <h3>Promotions</h3>
+            <p>Any promotion, discount, or limited offer will state its own terms at the point of sale. Promotions cannot be applied retroactively unless stated in writing.</p>
+          </article>
+        </div>
       </section>
     </main>
 
-    <footer class="footer reveal">☿ fairchild alchemy · est. 2025</footer>
+    <footer class="footer reveal">
+      <span>Fairchild Alchemy · fairchildalchemy.com · est. 2025</span>
+      <nav aria-label="Footer">
+        <a href="#contact">Contact</a>
+        <a href="#policies">Policies</a>
+      </nav>
+    </footer>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <!-- ─── MODAL ─── -->
@@ -149,12 +220,12 @@
             </div>
 
             <div class="tab-panel hidden" data-panel="purchase" role="tabpanel">
-              <div class="purchase-panel">
-                <p class="purchase-desc" id="purchase-desc"></p>
-                <a class="purchase-link" id="purchase-link" href="#" target="_blank" rel="noopener noreferrer">
-                  Proceed to Secure Checkout →
-                </a>
-                <p class="purchase-note">Powered by Stripe · 256-bit encryption · No account required</p>
+            <div class="purchase-panel">
+              <p class="purchase-desc" id="purchase-desc"></p>
+              <a class="purchase-link" id="purchase-link" href="#" target="_blank" rel="noopener noreferrer">
+                Proceed to Secure Checkout →
+              </a>
+                <p class="purchase-note">Secure checkout opens in a new tab. No account required.</p>
               </div>
             </div>
           </div>
