@@ -8,6 +8,7 @@ RUN npm ci --omit=dev
 COPY public ./public
 COPY data ./data
 COPY server.js ./
+COPY ad-security.cjs ./
 
 ENV NODE_ENV=production
 ENV PORT=8080
