@@ -54,6 +54,18 @@ test('server responds with homepage, health, and data', async () => {
     assert.match(homeHtml, /Store Policies/);
     assert.match(homeHtml, /Refunds & Disputes/);
     assert.match(homeHtml, /US shipping address/);
+    assert.match(homeHtml, /rel="canonical" href="https:\/\/fairchildalchemy.com\/"/);
+
+    const ads = await fetch(`${baseUrl}/ads.txt`);
+    assert.equal(ads.status, 200);
+    assert.match(ads.headers.get('content-type'), /text\/plain/);
+    assert.equal((await ads.text()).trim(), 'google.com, pub-6507410494434871, DIRECT, f08c47fec0942fa0');
+
+    for (const missing of ['/missing-page', '/missing-file.txt']) {
+      const response = await fetch(baseUrl + missing);
+      assert.equal(response.status, 404, missing);
+      assert.doesNotMatch(await response.text(), /<html/);
+    }
 
     const health = await fetch(`${baseUrl}/healthz`);
     assert.equal(health.status, 200);

@@ -222,7 +222,7 @@ export function createApp() {
   });
 
   app.get('*', (_req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.status(404).type('text/plain').send('Not found');
   });
 
   return app;
