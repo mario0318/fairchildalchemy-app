@@ -1,5 +1,6 @@
 import express from 'express';
 import helmet from 'helmet';
+import advertisingHtml from './ad-security.cjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -210,6 +211,12 @@ export function createApp() {
     })
   );
 
+  app.get(['/', '/index.html', '/advertising-privacy.html'], (req, res) => {
+    const file = req.path === '/advertising-privacy.html' ? 'advertising-privacy.html' : 'index.html';
+    const html = fs.readFileSync(path.join(__dirname, 'public', file), 'utf8');
+    res.setHeader('Cache-Control', 'no-cache');
+    res.type('html').send(advertisingHtml(html, res));
+  });
   app.use(
     express.static(path.join(__dirname, 'public'), {
       extensions: ['html']
